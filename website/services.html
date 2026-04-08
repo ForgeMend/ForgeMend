@@ -160,6 +160,73 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════
+         EXPORT DATA ANALYSIS
+    ═══════════════════════════════════════════════════════════ -->
+    <div style="background:var(--c-gray-50);">
+      <div class="container">
+        <div class="svc-detail" id="export-analysis" style="padding-block:var(--s-20);">
+          <div class="svc-content">
+            <span class="eyebrow">Quick Win Service</span>
+            <h2>Export data analysis</h2>
+            <div class="svc-price">$490 – $690</div>
+            <div class="svc-price-note">Fixed fee · delivered within 2 business days</div>
+            <p class="lead" style="margin-top:var(--s-4);">Your raw Sage X3 BPCUSTOMER or BPSUPPLIER export is nearly unreadable — multiple indicator columns, merged fields, and a structure that makes analysis almost impossible without significant manual work. We process your export and deliver a clean, structured CSV you can actually work with — deduplicated, validated, and ready to analyze or hand off to your team.</p>
+
+            <div class="svc-feature-list">
+              <div class="svc-feature">
+                <div class="svc-feature-dot">✓</div>
+                <p><strong>Clean structured CSV</strong> — all indicator columns flattened into readable fields.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-dot">✓</div>
+                <p><strong>Duplicate flags</strong> — duplicate codes identified and marked.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-dot">✓</div>
+                <p><strong>Blank required field flags</strong> — missing critical fields highlighted.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-dot">✓</div>
+                <p><strong>1-page summary</strong> of data quality findings.</p>
+              </div>
+              <div class="svc-feature">
+                <div class="svc-feature-dot">✓</div>
+                <p><strong>1 free revision within 7 days.</strong></p>
+              </div>
+            </div>
+
+            <div style="margin-top:var(--s-8); padding:var(--s-5) var(--s-6); background:var(--c-amber-pale); border-radius:var(--r-xl); border:1px solid rgba(217,119,6,.2);">
+              <p style="margin:0; color:var(--c-gray-700); font-size:var(--text-sm); line-height:1.75;">A natural starting point before a full conversion project. Clients often use this to understand their data quality before committing to a larger migration scope.</p>
+            </div>
+
+            <p style="margin-top:var(--s-6); margin-bottom:var(--s-2); color:var(--c-gray-600); font-size:var(--text-sm); font-weight:600;">Available for:</p>
+            <div class="svc-modules">
+              <span class="tag tag-navy">BPCUSTOMER export (customers)</span>
+              <span class="tag tag-navy">BPSUPPLIER export (suppliers)</span>
+            </div>
+          </div>
+
+          <div class="svc-visual">
+            <div class="code-box">
+              <div class="code-box-header"><span class="dot"></span> Analysis output — bpcustomer_analysis.csv</div>
+              <div class="code-box-body">
+<span class="b">[INFO]</span>  Source: BPCUSTOMER_export.csv | <span class="w">1,847 rows</span><br>
+<span class="g">[OK]</span>    Indicator columns flattened: <span class="w">24 → 8 fields</span><br>
+<span class="y">[WARN]</span>  <span class="w">143 duplicate</span> BPCNUM codes flagged<br>
+<span class="y">[WARN]</span>  <span class="w">38 records</span>: BPCNAM blank (required)<br>
+<span class="y">[WARN]</span>  <span class="w">21 records</span>: BPACITY blank<br>
+<span class="g">[OK]</span>    Clean CSV: bpcustomer_analysis.csv<br>
+<span class="dim">────────────────────────────────</span><br>
+<span class="g">[DONE]</span>  Rows: 1,847 · Dupes flagged: 143 · Blanks: 59<br>
+<span class="dim">See: data_quality_summary.pdf</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
          INDUSTRY EXPERIENCE
     ═══════════════════════════════════════════════════════════ -->
     <section class="fnb" id="fnb" aria-labelledby="fnb-services-heading">
@@ -245,6 +312,7 @@
           <div class="footer-col-links">
             <a href="services.html#products">Products / items</a>
             <a href="services.html#combined">Combined package</a>
+            <a href="services.html#export-analysis">Export data analysis</a>
             <a href="services.html#retainer">Quarterly retainer</a>
           </div>
         </div>
