@@ -306,7 +306,6 @@ p:last-child { margin-bottom: 0; }
   height: 38px;
   width: auto;
   display: block;
-  filter: brightness(0) invert(1);
 }
 
 /* Links */
