@@ -3,7 +3,7 @@
      Best use: Website header, email, letterhead. Most versatile.
      Colors: Navy #1B2D5B | Amber #D97706/#F59E0B
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 70" width="340" height="70" role="img" aria-label="ForgeMend Flame Wordmark Logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 70" width="400" height="70" role="img" aria-label="ForgeMend Flame Wordmark Logo">
   <title>ForgeMend — Flame Wordmark</title>
 
   <!-- ── FLAME ICON (38×58, centered at x=29, y=6→64) ── -->
@@ -61,7 +61,7 @@
   <circle cx="182" cy="38" r="4" fill="#D97706"/>
 
   <!-- Thin amber underline for the full wordmark -->
-  <rect x="58" y="52" width="274" height="3" rx="1.5" fill="#D97706" opacity="0.35"/>
+  <rect x="58" y="52" width="334" height="3" rx="1.5" fill="#D97706" opacity="0.35"/>
 
   <!-- Tagline -->
   <text
@@ -70,6 +70,6 @@
     font-weight="600"
     font-size="9.5"
     fill="#94A3B8"
-    letter-spacing="2.5"
-  >SAGE X3 ERP CONSULTING · US &amp; GLOBAL</text>
+    letter-spacing="2.2"
+  >SAGE X3 DATA OPERATIONS · BOSTON, MA</text>
 </svg>

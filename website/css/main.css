@@ -287,6 +287,8 @@ p:last-child { margin-bottom: 0; }
   height: 42px;
   width: auto;
   display: block;
+  flex-shrink: 0;
+  max-width: none;
 }
 
 /* Legacy selectors kept for fallback */
@@ -678,6 +680,57 @@ p:last-child { margin-bottom: 0; }
 
 .svc-card--featured .svc-check-item { color: rgba(255,255,255,.72); }
 .svc-card--featured .svc-check-item::before { color: var(--c-amber-light); }
+
+/* Outlined / secondary card (custom pipelines) */
+.svc-card--outline {
+  background: var(--c-gray-50);
+  border: 2px dashed var(--c-gray-300);
+}
+.svc-card--outline:hover {
+  border-color: var(--c-gray-400);
+  background: var(--c-white);
+  transform: translateY(-2px);
+  box-shadow: var(--sh-md);
+}
+.svc-card--outline h3 { font-size: var(--text-lg); }
+
+/* Pricing display */
+.svc-price {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 900;
+  color: var(--c-navy);
+  margin-bottom: var(--s-1);
+}
+.svc-price-note {
+  font-size: var(--text-sm);
+  color: var(--c-gray-400);
+  margin-bottom: var(--s-5);
+}
+
+/* "Most popular" badge */
+.svc-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--c-amber);
+  color: var(--c-white);
+  font-family: var(--font-heading);
+  font-size: .6875rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: var(--s-1) var(--s-3);
+  border-radius: var(--r-full);
+  margin-bottom: var(--s-4);
+}
+
+/* Module tags */
+.svc-modules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin: var(--s-3) 0 var(--s-5);
+}
 
 /* ──────────────────────────────────────────────────────────
    10. F&B SPOTLIGHT
@@ -1287,6 +1340,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 @media (max-width: 480px) {
+  .nav-logo-img { height: 34px; }
   .trust-bar-inner { gap: var(--s-5); }
   .cta-band-actions { flex-direction: column; align-items: center; }
 }
