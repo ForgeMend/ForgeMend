@@ -1,0 +1,55 @@
+<!-- ForgeMend Logo — White Version (for dark/navy backgrounds)
+     Use on: dark sections, email headers, banners.
+     version: 1.0
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 56" width="300" height="56" role="img" aria-label="ForgeMend">
+  <title>ForgeMend</title>
+
+  <!-- Flame icon -->
+  <g>
+    <path
+      d="M20,52 C20,52 5,39 9,23 C12,13 16,6 13,0
+         C20,8 24,18 21,28
+         C27,18 26,8 23,1
+         C34,15 34,33 27,45
+         C33,35 33,23 30,14
+         C39,27 37,49 22,52
+         C21,52 20,52 20,52 Z"
+      fill="#F59E0B"
+    />
+    <path
+      d="M23,49 C23,49 13,39 16,27 C18,21 20,15 18,9
+         C22,16 24,23 22,31
+         C26,24 26,16 24,9
+         C30,20 30,37 25,47
+         C24,48 23,49 23,49 Z"
+      fill="#FEF3C7"
+    />
+  </g>
+
+  <!-- "Forge" — white -->
+  <text
+    x="48" y="38"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="32"
+    fill="#FFFFFF"
+    letter-spacing="-0.3"
+  >Forge</text>
+
+  <!-- Separator dot -->
+  <circle cx="166" cy="32" r="3.5" fill="#F59E0B"/>
+
+  <!-- "Mend" — slightly off-white for contrast -->
+  <text
+    x="173" y="38"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="32"
+    fill="rgba(255,255,255,0.82)"
+    letter-spacing="-0.3"
+  >Mend</text>
+
+  <!-- Amber underline -->
+  <rect x="48" y="46" width="242" height="2.5" rx="1.25" fill="#F59E0B" opacity="0.4"/>
+</svg>

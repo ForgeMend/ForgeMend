@@ -1,0 +1,21 @@
+<!-- ForgeMend Favicon — Hex Badge Mark
+     Optimized for small sizes (16x16, 32x32, 48x48).
+     Based on Concept 03 simplified.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="ForgeMend">
+  <title>ForgeMend</title>
+  <!-- Hexagon background -->
+  <polygon points="16,1 29,8.5 29,23.5 16,31 3,23.5 3,8.5" fill="#1B2D5B"/>
+  <!-- Amber bottom bar -->
+  <rect x="6" y="24" width="20" height="3" rx="1.5" fill="#D97706"/>
+  <!-- "FM" text -->
+  <text
+    x="16" y="20"
+    font-family="'Arial Black', Arial, sans-serif"
+    font-weight="900"
+    font-size="13"
+    fill="#FFFFFF"
+    text-anchor="middle"
+    letter-spacing="-0.5"
+  >FM</text>
+</svg>

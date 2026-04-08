@@ -1,0 +1,54 @@
+# ForgeMend — Netlify Deployment Configuration
+# version: 1.0
+# Publish directory: website/
+# Build: no build step (static HTML/CSS/JS)
+
+[build]
+  publish = "website"
+
+# ── Security Headers ─────────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "DENY"
+    X-XSS-Protection       = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+    Permissions-Policy     = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:; connect-src 'self';"
+
+# ── Cache static assets ───────────────────────────────────────
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# ── Redirects ────────────────────────────────────────────────
+# www → non-www (canonical)
+[[redirects]]
+  from   = "https://www.forgemend.com/*"
+  to     = "https://forgemend.com/:splat"
+  status = 301
+  force  = true
+
+# thank-you page after form submission
+[[redirects]]
+  from   = "/thank-you"
+  to     = "/contact.html"
+  status = 200
+
+# 404 fallback
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 404

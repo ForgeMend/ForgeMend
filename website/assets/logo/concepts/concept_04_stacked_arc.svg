@@ -1,0 +1,56 @@
+<!-- ForgeMend Logo Concept 04 — The Stacked Arc
+     "FORGE" stacked over "MEND" connected by an amber arc — suggesting
+     connection, repair, and continuity. Strong vertical presence.
+     Best use: Print materials, banners, letterhead, trade show.
+     Colors: Navy #1B2D5B | Amber #D97706 | Steel Blue #2D6A9F
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 180" width="260" height="180" role="img" aria-label="ForgeMend Stacked Arc Logo">
+  <title>ForgeMend — Stacked Arc</title>
+
+  <!-- "FORGE" — large, bold, navy -->
+  <text
+    x="130" y="68"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="52"
+    fill="#1B2D5B"
+    text-anchor="middle"
+    letter-spacing="4"
+  >FORGE</text>
+
+  <!-- Amber arc connecting the two words -->
+  <!-- Arc: top of arc at y=80, spans from x=30 to x=230 -->
+  <path
+    d="M 30,100 Q 130,72 230,100"
+    fill="none"
+    stroke="#D97706"
+    stroke-width="3.5"
+    stroke-linecap="round"
+  />
+
+  <!-- Small amber dots at arc endpoints -->
+  <circle cx="30"  cy="100" r="4" fill="#D97706"/>
+  <circle cx="230" cy="100" r="4" fill="#D97706"/>
+
+  <!-- "MEND" — slightly smaller, steel blue -->
+  <text
+    x="130" y="148"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="48"
+    fill="#2D6A9F"
+    text-anchor="middle"
+    letter-spacing="8"
+  >MEND</text>
+
+  <!-- Tagline below -->
+  <text
+    x="130" y="170"
+    font-family="'Arial', Helvetica, sans-serif"
+    font-weight="600"
+    font-size="9"
+    fill="#94A3B8"
+    text-anchor="middle"
+    letter-spacing="3"
+  >SAGE X3 DATA ENGINEERING · BOSTON</text>
+</svg>

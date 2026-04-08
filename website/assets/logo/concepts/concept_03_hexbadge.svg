@@ -1,0 +1,61 @@
+<!-- ForgeMend Logo Concept 03 — The Hex Badge
+     Hexagon (industrial / precision) with "FM" inside.
+     Best use: Social media profile, stamps, certification badges, favicon.
+     Colors: Navy #1B2D5B | Amber #D97706 | White
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 200" width="180" height="200" role="img" aria-label="ForgeMend Hex Badge Logo">
+  <title>ForgeMend — Hex Badge</title>
+
+  <!-- Outer hexagon (shadow layer) -->
+  <polygon
+    points="90,4 172,48 172,152 90,196 8,152 8,48"
+    fill="#0F1D3D"
+    opacity="0.4"
+    transform="translate(0, 2)"
+  />
+
+  <!-- Main hexagon fill -->
+  <polygon
+    points="90,4 172,48 172,152 90,196 8,152 8,48"
+    fill="#1B2D5B"
+  />
+
+  <!-- Inner hexagon ring (lighter border) -->
+  <polygon
+    points="90,14 162,54 162,146 90,186 18,146 18,54"
+    fill="none"
+    stroke="rgba(255,255,255,0.08)"
+    stroke-width="1.5"
+  />
+
+  <!-- Amber accent hexagon at top -->
+  <polygon
+    points="90,22 152,58 152,90 90,90 28,90 28,58"
+    fill="rgba(217,119,6,0.1)"
+  />
+
+  <!-- "F" glyph -->
+  <rect x="42" y="65" width="9"  height="70" rx="2.5" fill="#FFFFFF"/>
+  <rect x="42" y="65" width="42" height="9"  rx="2.5" fill="#FFFFFF"/>
+  <rect x="42" y="98" width="32" height="8"  rx="2.5" fill="#FFFFFF"/>
+
+  <!-- "M" glyph -->
+  <rect x="96"  y="65" width="9" height="70" rx="2.5" fill="#FFFFFF"/>
+  <rect x="131" y="65" width="9" height="70" rx="2.5" fill="#FFFFFF"/>
+  <!-- M diagonals -->
+  <polygon points="96,65 105,65 120,94 135,65 140,65 140,72 124,101 120,90 116,101 96,72" fill="#FFFFFF"/>
+
+  <!-- Amber bottom accent line -->
+  <rect x="30" y="150" width="120" height="5" rx="2.5" fill="#D97706"/>
+
+  <!-- "BOSTON · MA" micro label -->
+  <text
+    x="90" y="170"
+    font-family="'Arial', Helvetica, sans-serif"
+    font-weight="700"
+    font-size="10"
+    fill="rgba(255,255,255,0.4)"
+    text-anchor="middle"
+    letter-spacing="3.5"
+  >BOSTON · MA</text>
+</svg>

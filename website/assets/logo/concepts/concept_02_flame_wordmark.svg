@@ -1,0 +1,75 @@
+<!-- ForgeMend Logo Concept 02 — The Flame Wordmark (RECOMMENDED PRIMARY)
+     Abstract flame icon left + "ForgeMend" wordmark right.
+     Best use: Website header, email, letterhead. Most versatile.
+     Colors: Navy #1B2D5B | Amber #D97706/#F59E0B
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 70" width="340" height="70" role="img" aria-label="ForgeMend Flame Wordmark Logo">
+  <title>ForgeMend — Flame Wordmark</title>
+
+  <!-- ── FLAME ICON (38×58, centered at x=29, y=6→64) ── -->
+  <g transform="translate(6, 5)">
+    <!-- Outer flame body — amber -->
+    <path
+      d="M23,59 C23,59 6,44 11,26 C14,15 18,7 15,0
+         C23,9 27,20 24,31
+         C30,21 30,10 27,2
+         C38,17 39,37 31,50
+         C37,40 37,27 34,17
+         C44,31 42,55 26,59
+         C25,59 24,59 23,59 Z"
+      fill="#D97706"
+    />
+    <!-- Inner highlight — lighter amber -->
+    <path
+      d="M26,55 C26,55 15,44 18,31 C20,24 22,18 20,12
+         C25,19 27,27 25,36
+         C29,28 29,19 27,12
+         C34,23 34,42 28,53
+         C27,54 26,55 26,55 Z"
+      fill="#F59E0B"
+    />
+    <!-- Flame tip highlight -->
+    <path
+      d="M26,22 C26,22 22,16 23,10 C25,14 27,18 26,22 Z"
+      fill="#FEF3C7"
+      opacity="0.7"
+    />
+  </g>
+
+  <!-- ── WORDMARK ── -->
+  <!-- "Forge" in heavy navy -->
+  <text
+    x="58" y="44"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="36"
+    fill="#1B2D5B"
+    letter-spacing="-0.5"
+  >Forge</text>
+
+  <!-- "Mend" in steel blue, lighter weight -->
+  <text
+    x="186" y="44"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="36"
+    fill="#2D6A9F"
+    letter-spacing="-0.5"
+  >Mend</text>
+
+  <!-- Amber divider dot between words -->
+  <circle cx="182" cy="38" r="4" fill="#D97706"/>
+
+  <!-- Thin amber underline for the full wordmark -->
+  <rect x="58" y="52" width="274" height="3" rx="1.5" fill="#D97706" opacity="0.35"/>
+
+  <!-- Tagline -->
+  <text
+    x="58" y="65"
+    font-family="'Arial', Helvetica, sans-serif"
+    font-weight="600"
+    font-size="9.5"
+    fill="#94A3B8"
+    letter-spacing="2.5"
+  >SAGE X3 DATA ENGINEERING · BOSTON, MA</text>
+</svg>
