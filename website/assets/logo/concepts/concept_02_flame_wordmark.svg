@@ -58,10 +58,10 @@
   >Mend</text>
 
   <!-- Amber divider dot between words -->
-  <circle cx="182" cy="38" r="4" fill="#D97706"/>
+  <circle cx="181" cy="32" r="4" fill="#D97706"/>
 
   <!-- Thin amber underline for the full wordmark -->
-  <rect x="58" y="52" width="334" height="3" rx="1.5" fill="#D97706" opacity="0.35"/>
+  <rect x="58" y="52" width="252" height="2" rx="1" fill="#D97706" opacity="0.4"/>
 
   <!-- Tagline -->
   <text
