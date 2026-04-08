@@ -1,21 +1,33 @@
-<!-- ForgeMend Favicon — Hex Badge Mark
+<!-- ForgeMend Favicon — Flame Icon
      Optimized for small sizes (16x16, 32x32, 48x48).
-     Based on Concept 03 simplified.
+     Extracted from Concept 02: Flame Wordmark.
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="ForgeMend">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 64" width="48" height="64" role="img" aria-label="ForgeMend">
   <title>ForgeMend</title>
-  <!-- Hexagon background -->
-  <polygon points="16,1 29,8.5 29,23.5 16,31 3,23.5 3,8.5" fill="#1B2D5B"/>
-  <!-- Amber bottom bar -->
-  <rect x="6" y="24" width="20" height="3" rx="1.5" fill="#D97706"/>
-  <!-- "FM" text -->
-  <text
-    x="16" y="20"
-    font-family="'Arial Black', Arial, sans-serif"
-    font-weight="900"
-    font-size="13"
-    fill="#FFFFFF"
-    text-anchor="middle"
-    letter-spacing="-0.5"
-  >FM</text>
+  <!-- Outer flame body — amber -->
+  <path
+    d="M24,62 C24,62 6,46 12,26 C16,14 21,5 17,0
+       C26,10 31,23 27,36
+       C34,24 34,11 30,2
+       C43,19 44,42 34,56
+       C41,44 41,29 37,17
+       C49,33 47,59 28,63
+       C26,63 25,62 24,62 Z"
+    fill="#D97706"
+  />
+  <!-- Inner highlight — lighter amber -->
+  <path
+    d="M28,57 C28,57 15,46 18,31 C21,23 24,15 21,7
+       C27,16 30,27 28,37
+       C34,27 33,16 30,7
+       C39,21 39,44 31,55
+       C30,56 29,57 28,57 Z"
+    fill="#F59E0B"
+  />
+  <!-- Flame tip highlight -->
+  <path
+    d="M28,20 C28,20 23,12 24,5 C27,11 30,16 28,20 Z"
+    fill="#FEF3C7"
+    opacity="0.75"
+  />
 </svg>
