@@ -1009,20 +1009,6 @@ p:last-child { margin-bottom: 0; }
   align-items: start;
 }
 
-.boston-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--s-2);
-  background: var(--c-gray-100);
-  padding: var(--s-2) var(--s-4);
-  border-radius: var(--r-full);
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 700;
-  color: var(--c-gray-600);
-  margin-bottom: var(--s-5);
-}
-
 .about-intro .lead { font-size: var(--text-xl); color: var(--c-gray-700); margin-bottom: var(--s-6); }
 
 .values-list {
