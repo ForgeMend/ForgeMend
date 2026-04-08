@@ -37,39 +37,41 @@
   </g>
 
   <!-- ── WORDMARK ── -->
-  <!-- "Forge" in heavy navy -->
+  <!-- "Forge" in bright blue -->
   <text
     x="58" y="44"
     font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
     font-weight="900"
     font-size="36"
-    fill="#1B2D5B"
+    fill="#2563EB"
     letter-spacing="-0.5"
   >Forge</text>
 
-  <!-- "Mend" in steel blue, lighter weight -->
+  <!-- "Mend" in lighter blue -->
   <text
     x="186" y="44"
     font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
     font-weight="900"
     font-size="36"
-    fill="#2D6A9F"
+    fill="#3B82F6"
     letter-spacing="-0.5"
   >Mend</text>
 
-  <!-- Amber divider dot between words -->
-  <circle cx="181" cy="32" r="4" fill="#D97706"/>
+  <!-- Amber divider dot — centered between Forge and Mend -->
+  <circle cx="179" cy="31" r="4" fill="#D97706"/>
 
-  <!-- Thin amber underline for the full wordmark -->
-  <rect x="58" y="52" width="252" height="2" rx="1" fill="#D97706" opacity="0.4"/>
+  <!-- Thin amber underline — spans wordmark start to end of Mend "d" -->
+  <rect x="58" y="52" width="238" height="2" rx="1" fill="#D97706" opacity="0.4"/>
 
-  <!-- Tagline -->
+  <!-- Tagline — centered under wordmark using text-anchor middle -->
   <text
-    x="58" y="65"
+    x="168" y="65"
+    text-anchor="middle"
     font-family="'Arial', Helvetica, sans-serif"
     font-weight="600"
     font-size="9.5"
-    fill="#94A3B8"
+    fill="#64748B"
     letter-spacing="2.2"
   >SAGE X3 DATA OPERATIONS</text>
+
 </svg>
