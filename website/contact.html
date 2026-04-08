@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Contact ForgeMend — Book a Free Sage X3 Discovery Call</title>
-  <meta name="description" content="Ready to fix your Sage X3 data? Contact ForgeMend for a free 30-minute discovery call. Sage X3 ERP specialists serving clients across the US and globally. Email info@forgemend.com." />
-  <meta name="keywords" content="contact ForgeMend, Sage X3 consultant contact, book ERP discovery call, info@forgemend.com, Sage X3 data specialist" />
+  <title>Start Your Sage X3 Data Project | ForgeMend</title>
+  <meta name="description" content="Submit your Sage X3 data conversion project. Upload your import template and tell us what you need — we'll confirm a fixed price within 1 business day. Email info@forgemend.com." />
+  <meta name="keywords" content="contact ForgeMend, Sage X3 data conversion quote, sage x3 import template, info@forgemend.com, Sage X3 data specialist" />
   <link rel="canonical" href="https://forgemend.com/contact.html" />
 
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://forgemend.com/contact.html" />
-  <meta property="og:title"       content="Contact ForgeMend — Book a Free Discovery Call" />
-  <meta property="og:description" content="Book a free 30-minute discovery call with ForgeMend's Sage X3 ERP specialists. No obligation, no sales pitch — just an honest assessment of your data situation. US & global." />
+  <meta property="og:title"       content="Start Your Sage X3 Data Project | ForgeMend" />
+  <meta property="og:description" content="Submit your Sage X3 data conversion project. Upload your import template — we'll confirm a fixed price within 1 business day. No calls required for smaller projects." />
 
   <link rel="icon" type="image/svg+xml" href="assets/logo/concepts/concept_02_flame_wordmark.svg" />
   <link rel="stylesheet" href="css/main.css" />
@@ -50,9 +50,9 @@
     <section class="page-header">
       <div class="container">
         <div class="page-header-content">
-          <span class="eyebrow" style="color:var(--c-amber-light)">Get in Touch</span>
-          <h1>Let's Talk About Your Data</h1>
-          <p>Fill in a short form — we'll confirm a fixed price within 1 business day. No calls required for smaller projects.</p>
+          <span class="eyebrow" style="color:var(--c-amber-light)">Start Your Project</span>
+          <h1>Submit your Sage X3 data project</h1>
+          <p>Fill in the form — upload your Sage X3 import template and tell us what you need. We'll confirm a fixed price within 1 business day. No calls required for single-module projects.</p>
         </div>
       </div>
     </section>
@@ -109,10 +109,10 @@
             <div style="margin-top: var(--s-10); padding: var(--s-6); background: var(--c-amber-pale); border-radius: var(--r-xl); border: 1px solid rgba(217,119,6,.2);">
               <h3 style="font-size:var(--text-lg); margin-bottom:var(--s-3); color:var(--c-amber);">What Happens After You Submit</h3>
               <div class="svc-check-list">
-                <div class="svc-check-item" style="color:var(--c-gray-700);">We review your project details same day</div>
-                <div class="svc-check-item" style="color:var(--c-gray-700);">You receive a reply within 1 business day</div>
-                <div class="svc-check-item" style="color:var(--c-gray-700);">We schedule a 30-min no-obligation discovery call</div>
-                <div class="svc-check-item" style="color:var(--c-gray-700);">You get an honest assessment of your data situation</div>
+                <div class="svc-check-item" style="color:var(--c-gray-700);">We review your template and project details same day</div>
+                <div class="svc-check-item" style="color:var(--c-gray-700);">You receive a fixed price and delivery date within 1 business day</div>
+                <div class="svc-check-item" style="color:var(--c-gray-700);">You sign a one-page scope agreement and pay a 50% deposit</div>
+                <div class="svc-check-item" style="color:var(--c-gray-700);">You share your data — we deliver clean CSV files by the agreed date</div>
               </div>
             </div>
           </div>
@@ -155,8 +155,8 @@
                     <input class="form-input" type="email" id="email" name="email" required autocomplete="email" placeholder="jane@yourcompany.com" />
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="phone">Phone</label>
-                    <input class="form-input" type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(617) 555-0100" />
+                    <label class="form-label" for="source-system">Source System <span class="req">*</span></label>
+                    <input class="form-input" type="text" id="source-system" name="source_system" required placeholder="e.g. QuickBooks, SAP Business One, Dynamics NAV, Excel" />
                   </div>
                 </div>
 
@@ -172,13 +172,27 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="form-label" for="service">Primary Interest</label>
-                  <select class="form-select" id="service" name="service">
-                    <option value="">Select a service…</option>
-                    <option value="single-module">Single-module data conversion ($2,900–$4,900)</option>
-                    <option value="full-migration">Full master data migration package ($7,900–$12,900)</option>
-                    <option value="custom-pipelines">Custom import/export pipelines (price on request)</option>
-                    <option value="other">Not sure yet — just want to talk</option>
+                  <label class="form-label" for="service">Which modules do you need converted? <span class="req">*</span></label>
+                  <select class="form-select" id="service" name="service" required>
+                    <option value="">Select…</option>
+                    <option value="products">Products / items only</option>
+                    <option value="customers">Customers only</option>
+                    <option value="suppliers">Suppliers only</option>
+                    <option value="inventory">Inventory / stock only</option>
+                    <option value="multi-module">Multiple modules (full migration package)</option>
+                    <option value="pipelines">Custom import/export pipelines (recurring need)</option>
+                    <option value="unsure">Not sure yet</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="record-count">Approximate record count <span class="req">*</span></label>
+                  <select class="form-select" id="record-count" name="record_count" required>
+                    <option value="">Select…</option>
+                    <option value="under-1k">Under 1,000 rows</option>
+                    <option value="1k-5k">1,000 – 5,000 rows</option>
+                    <option value="5k-15k">5,000 – 15,000 rows</option>
+                    <option value="over-15k">Over 15,000 rows</option>
                   </select>
                 </div>
 
@@ -188,25 +202,35 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="form-label" for="message">Tell Us About Your Project <span class="req">*</span></label>
+                  <label class="form-label" for="template-file">Your Sage X3 import template <span class="req">*</span></label>
+                  <p style="font-size:12px; color:var(--c-gray-500); margin-bottom:8px;">
+                    Export from Setup → Usage → Imports/Exports in Sage X3, or use the file your Sage partner provided.
+                    This file has no client data — it's just the column structure. Accepted: .csv, .xlsx, .xls
+                  </p>
+                  <input class="form-input" type="file" id="template-file" name="template_file"
+                    accept=".csv,.xlsx,.xls" required />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="message">Describe your main data challenge <span class="req">*</span></label>
                   <textarea
                     class="form-textarea"
                     id="message"
                     name="message"
                     required
-                    placeholder="Describe your current data situation, your timeline, and what's not working. The more context you give us, the more useful our discovery call will be."
+                    placeholder="One sentence is enough. e.g. 'Our product codes don't match what Sage X3 expects and UOM units are inconsistent.' Include your go-live date if you have one."
                   ></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-lg form-submit">
-                  Send Message &rarr;
+                  Submit project request &rarr;
                 </button>
-                <p class="form-sub">We respond within 1 business day. No spam, no sharing of your information.</p>
+                <p class="form-sub">We review every submission and reply within 1 business day with a fixed price and delivery date. No spam, no sharing of your data.</p>
               </form>
 
               <div id="form-success">
-                <h3>✅ Message Received!</h3>
-                <p>Thank you — we'll be in touch within one business day to schedule your discovery call.</p>
+                <h3>✅ Project request received!</h3>
+                <p>Thank you — we'll review your details and reply within one business day with a fixed price and delivery date.</p>
               </div>
             </div>
           </div>
@@ -226,8 +250,8 @@
 
         <div class="grid-2" style="max-width:900px; margin-inline:auto;">
           <div class="svc-card fade-up">
-            <h3 style="font-size:var(--text-lg);">What should I bring to the discovery call?</h3>
-            <p>Nothing formal required. It helps to have a rough sense of your record counts (customers, suppliers, items) and your Sage X3 version — but we can figure the rest out together once we see your template.</p>
+            <h3 style="font-size:var(--text-lg);">What do I need to submit a project?</h3>
+            <p>Two things: your Sage X3 import template (exported from Setup → Usage → Imports/Exports, or provided by your Sage partner) and a rough sense of your record counts. You share the actual data only after we've agreed on price and scope.</p>
           </div>
           <div class="svc-card fade-up">
             <h3 style="font-size:var(--text-lg);">Where do you serve clients?</h3>
@@ -235,7 +259,7 @@
           </div>
           <div class="svc-card fade-up">
             <h3 style="font-size:var(--text-lg);">How do you price engagements?</h3>
-            <p>Most data cleanup and import projects are fixed-fee based on scope. We provide a written quote after the discovery call — no hourly surprises.</p>
+            <p>Most data cleanup and import projects are fixed-fee based on scope. We review your template and send a written quote within 1 business day — no hourly surprises.</p>
           </div>
           <div class="svc-card fade-up">
             <h3 style="font-size:var(--text-lg);">We're mid-project and our import files are failing. Can you still help?</h3>
@@ -262,7 +286,7 @@
           <a href="index.html" class="footer-logo">
             <img src="assets/logo/concepts/concept_02_flame_wordmark.svg" alt="ForgeMend" class="footer-logo-img" />
           </a>
-          <p class="footer-tagline">Sage X3 data operations specialist. Boston, MA — remote services worldwide.</p>
+          <p class="footer-tagline">Sage X3 data operations specialist · Remote services across North America.</p>
           <div class="footer-contact-links">
             <a href="mailto:info@forgemend.com" class="footer-contact-link">📧 info@forgemend.com</a>
           </div>
