@@ -1,0 +1,75 @@
+<!-- ForgeMend Logo — White version for dark backgrounds (footer)
+     Use on: dark navy footer, dark hero sections
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 70" width="400" height="70" role="img" aria-label="ForgeMend Flame Wordmark Logo">
+  <title>ForgeMend — Flame Wordmark (White)</title>
+
+  <!-- ── FLAME ICON ── -->
+  <g transform="translate(6, 5)">
+    <!-- Outer flame body — amber (kept for brand recognition) -->
+    <path
+      d="M23,59 C23,59 6,44 11,26 C14,15 18,7 15,0
+         C23,9 27,20 24,31
+         C30,21 30,10 27,2
+         C38,17 39,37 31,50
+         C37,40 37,27 34,17
+         C44,31 42,55 26,59
+         C25,59 24,59 23,59 Z"
+      fill="#D97706"
+    />
+    <!-- Inner highlight — lighter amber -->
+    <path
+      d="M26,55 C26,55 15,44 18,31 C20,24 22,18 20,12
+         C25,19 27,27 25,36
+         C29,28 29,19 27,12
+         C34,23 34,42 28,53
+         C27,54 26,55 26,55 Z"
+      fill="#F59E0B"
+    />
+    <!-- Flame tip highlight -->
+    <path
+      d="M26,22 C26,22 22,16 23,10 C25,14 27,18 26,22 Z"
+      fill="#FEF3C7"
+      opacity="0.7"
+    />
+  </g>
+
+  <!-- ── WORDMARK — white text for dark backgrounds ── -->
+  <!-- "Forge" in white -->
+  <text
+    x="58" y="44"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="36"
+    fill="#FFFFFF"
+    letter-spacing="-0.5"
+  >Forge</text>
+
+  <!-- "Mend" in white, slightly transparent to keep two-tone feel -->
+  <text
+    x="186" y="44"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="36"
+    fill="#FFFFFF"
+    opacity="0.85"
+    letter-spacing="-0.5"
+  >Mend</text>
+
+  <!-- Amber divider dot — same position as primary logo -->
+  <circle cx="179" cy="31" r="4" fill="#D97706"/>
+
+  <!-- Amber underline — same dimensions as primary logo -->
+  <rect x="58" y="52" width="238" height="2" rx="1" fill="#D97706" opacity="0.6"/>
+
+  <!-- Tagline in light grey — readable on dark -->
+  <text
+    x="168" y="65"
+    text-anchor="middle"
+    font-family="'Arial', Helvetica, sans-serif"
+    font-weight="600"
+    font-size="9.5"
+    fill="#94A3B8"
+    letter-spacing="2.2"
+  >SAGE X3 DATA OPERATIONS</text>
+</svg>
