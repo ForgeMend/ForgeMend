@@ -48,7 +48,7 @@
   <!-- Amber bottom accent line -->
   <rect x="30" y="150" width="120" height="5" rx="2.5" fill="#D97706"/>
 
-  <!-- "BOSTON · MA" micro label -->
+  <!-- Tagline label -->
   <text
     x="90" y="170"
     font-family="'Arial', Helvetica, sans-serif"
@@ -57,5 +57,5 @@
     fill="rgba(255,255,255,0.4)"
     text-anchor="middle"
     letter-spacing="3.5"
-  >BOSTON · MA</text>
+  >SAGE X3 DATA OPERATIONS</text>
 </svg>

@@ -58,176 +58,105 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════
-         SERVICE 1 — SINGLE MODULE
+         SERVICES — MODULAR PRICING
     ═══════════════════════════════════════════════════════════ -->
-    <div class="container">
-      <div class="svc-detail" id="single-module">
-        <div class="svc-content">
-          <div class="svc-big-num">01</div>
-          <div class="svc-badge">Most popular</div>
-          <span class="eyebrow">Core Service</span>
-          <h2>Single-module data conversion</h2>
-          <div class="svc-price">$2,900 – $4,900</div>
-          <div class="svc-price-note">Fixed fee · price confirmed within 1 business day</div>
-          <p class="lead">Send us your Sage X3 import template and your old ERP data export. We map the fields, handle UOM conversions, remove duplicates, and deliver a validated CSV file ready to import — plus a short guide on how to run a safe test import in your environment.</p>
-
-          <p style="color:var(--c-gray-600); margin-bottom:var(--s-4);">Available for any of these modules:</p>
-          <div class="svc-modules">
-            <span class="tag tag-navy">Products / items (including UOM conversions)</span>
-            <span class="tag tag-navy">Customers</span>
-            <span class="tag tag-navy">Suppliers</span>
-            <span class="tag tag-navy">Inventory / stock movements</span>
-          </div>
-
-          <div class="svc-feature-list">
-            <div class="svc-feature">
-              <div class="svc-feature-dot">✓</div>
-              <p><strong>Clean, import-ready CSV</strong> mapped to your exact Sage X3 template — not a generic output.</p>
-            </div>
-            <div class="svc-feature">
-              <div class="svc-feature-dot">✓</div>
-              <p><strong>UOM conversion logic</strong> where applicable — EA/CS, LB/KG, GL/LT and more, validated against your Sage X3 reference data.</p>
-            </div>
-            <div class="svc-feature">
-              <div class="svc-feature-dot">✓</div>
-              <p><strong>Duplicate removal and data cleanup</strong> — standardised codes, normalised addresses, and resolved conflicts flagged with a reason.</p>
-            </div>
-            <div class="svc-feature">
-              <div class="svc-feature-dot">✓</div>
-              <p><strong>1–2 page PDF import guide</strong> explaining how to run a safe test import in your Sage X3 environment before touching production data.</p>
-            </div>
-            <div class="svc-feature">
-              <div class="svc-feature-dot">✓</div>
-              <p><strong>1 free revision round within 7 days</strong> of delivery — if field mappings change or new data comes in, we adjust at no extra cost.</p>
-            </div>
-          </div>
-        </div>
-        <div class="svc-visual">
-          <div class="code-box">
-            <div class="code-box-header"><span class="dot"></span> Sample output — customers_x3_import.csv</div>
-            <div class="code-box-body">
-<span class="b">[INFO]</span>  Source: customers_export.xlsx | <span class="w">2,341 rows</span><br>
-<span class="g">[OK]</span>    Field mapping: BPCNUM, BPCNAM, BPACITY ✓<br>
-<span class="g">[OK]</span>    Deduplication: <span class="w">87 duplicates</span> resolved<br>
-<span class="g">[OK]</span>    UOM alignment: n/a (customer record)<br>
-<span class="y">[WARN]</span>  <span class="w">12 records</span>: state code standardised<br>
-<span class="g">[OK]</span>    Output: bpcustomer_import.csv<br>
-<span class="dim">────────────────────────────────</span><br>
-<span class="g">[DONE]</span>  Rows in: 2,341 · Out: 2,329 · Skipped: 12
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         SERVICE 2 — FULL MIGRATION
-    ═══════════════════════════════════════════════════════════ -->
-    <div id="full-migration" style="background:var(--c-gray-50); margin-block: var(--s-2);">
+    <section class="section" id="pricing" aria-labelledby="pricing-heading">
       <div class="container">
-        <div class="svc-detail reverse" style="padding-block:var(--s-20);">
-          <div class="svc-content">
-            <div class="svc-big-num">02</div>
-            <span class="eyebrow">Full Package</span>
-            <h2>Full master data migration package</h2>
-            <div class="svc-price">$7,900 – $12,900</div>
-            <div class="svc-price-note">Fixed fee · scoped after a brief intake call</div>
-            <p class="lead">Need products, customers, and suppliers all converted for your Sage X3 project? We scope the full job, map every module to your exact templates, validate the output, and deliver a clean file set with a migration readiness report. No guesswork, no last-minute surprises.</p>
-            <div class="svc-feature-list">
-              <div class="svc-feature">
-                <div class="svc-feature-dot">✓</div>
-                <p><strong>All modules you need:</strong> products, customers, suppliers, inventory — one project, one fixed price.</p>
-              </div>
-              <div class="svc-feature">
-                <div class="svc-feature-dot">✓</div>
-                <p><strong>Cross-dataset deduplication</strong> — customers that appear in both the customer and supplier export are reconciled correctly.</p>
-              </div>
-              <div class="svc-feature">
-                <div class="svc-feature-dot">✓</div>
-                <p><strong>Validation report</strong> confirming zero critical mapping errors before you import anything into Sage X3.</p>
-              </div>
-              <div class="svc-feature">
-                <div class="svc-feature-dot">✓</div>
-                <p><strong>One CSV per module,</strong> import-ready, named and structured for your exact Sage X3 version.</p>
-              </div>
-              <div class="svc-feature">
-                <div class="svc-feature-dot">✓</div>
-                <p><strong>PDF import guide per module</strong> — step-by-step instructions for a safe test import before touching production.</p>
-              </div>
-              <div class="svc-feature">
-                <div class="svc-feature-dot">✓</div>
-                <p><strong>1 free revision round within 7 days</strong> of delivery. Requires a brief intake call to scope correctly.</p>
-              </div>
-            </div>
-          </div>
-          <div class="svc-visual">
-            <div class="code-box">
-              <div class="code-box-header"><span class="dot"></span> Migration readiness report (excerpt)</div>
-              <div class="code-box-body">
-<span class="b">Module</span>          <span class="b">Records</span>  <span class="b">Status</span><br>
-<span class="d">────────────────────────────────────</span><br>
-Products (items)   <span class="w">4,872</span>    <span class="g">✓ Ready</span><br>
-Customers          <span class="w">1,203</span>    <span class="g">✓ Ready</span><br>
-Suppliers            <span class="w">387</span>    <span class="g">✓ Ready</span><br>
-Inventory            <span class="w">912</span>    <span class="g">✓ Ready</span><br>
-<span class="d">────────────────────────────────────</span><br>
-Critical errors:       <span class="g">0</span><br>
-Warnings (flagged):   <span class="y">23</span>  (see report)<br>
-<span class="g">[PASS]</span> All modules validated · safe to import
-              </div>
-            </div>
-          </div>
+        <div class="section-header">
+          <span class="eyebrow">Our Services</span>
+          <h2 id="pricing-heading">Clear pricing. No hourly surprises.</h2>
+          <div class="divider"></div>
+          <p>Every project is fixed-fee. Upload your Sage X3 import template — we confirm a price within 1 business day.</p>
         </div>
-      </div>
-    </div>
 
-    <!-- ═══════════════════════════════════════════════════════════
-         SERVICE 3 — CUSTOM PIPELINES
-    ═══════════════════════════════════════════════════════════ -->
-    <div class="container">
-      <div class="svc-detail" id="pipelines" style="padding-block:var(--s-20);">
-        <div class="svc-content">
-          <div class="svc-big-num" style="color:var(--c-gray-300);">03</div>
-          <span class="eyebrow">For Repeat / Larger Clients</span>
-          <h2>Custom import/export pipelines</h2>
-          <div class="svc-price" style="color:var(--c-gray-600);">Price on request</div>
-          <div class="svc-price-note">Scoped per engagement</div>
-          <p class="lead">For clients with recurring data needs, we build reusable, validated data pipelines using your Sage X3 import/export templates, Power Query, and Python scripts. Paste your source data, get a clean X3-ready output every time — without rebuilding the logic from scratch.</p>
-          <div class="svc-feature-list">
-            <div class="svc-feature">
-              <div class="svc-feature-dot">✓</div>
-              <p><strong>Reusable scripts you own outright</strong> — clean, commented, and documented so your team can run them independently.</p>
-            </div>
-            <div class="svc-feature">
-              <div class="svc-feature-dot">✓</div>
-              <p><strong>Validated output on every run</strong> — same field mapping, same deduplication logic, same error reporting each time.</p>
-            </div>
-            <div class="svc-feature">
-              <div class="svc-feature-dot">✓</div>
-              <p><strong>Scheduled or on-demand execution</strong> — Windows Task Scheduler, cron, or manual trigger, your choice.</p>
-            </div>
-            <div class="svc-feature">
-              <div class="svc-feature-dot">✓</div>
-              <p><strong>Power Query or Python</strong> depending on your team's tools — both produce the same validated, import-ready output.</p>
+        <!-- Single-module cards: Products / Customers / Suppliers -->
+        <div class="grid-3" style="margin-bottom:var(--s-6);">
+
+          <div class="svc-card fade-up" id="products">
+            <div class="svc-icon">📦</div>
+            <h3>Products / Items</h3>
+            <div class="svc-price">$4,500</div>
+            <div class="svc-price-note">Fixed fee · 1 module</div>
+            <div class="svc-check-list" style="margin-top:var(--s-4);">
+              <div class="svc-check-item">Field mapping to your exact Sage X3 template</div>
+              <div class="svc-check-item">UOM conversions (EA, CS, LB, KG, GL, and more)</div>
+              <div class="svc-check-item">Duplicate removal and code standardisation</div>
+              <div class="svc-check-item">Validated, import-ready CSV + PDF import guide</div>
+              <div class="svc-check-item">1 free revision round within 7 days</div>
             </div>
           </div>
-        </div>
-        <div class="svc-visual">
-          <div class="code-box">
-            <div class="code-box-header"><span class="dot"></span> Pipeline run — vendor_prices.csv</div>
-            <div class="code-box-body">
-<span class="b">[2026-04-08 06:00:01]</span> <span class="g">INFO</span>  Pipeline started<br>
-<span class="b">[2026-04-08 06:00:02]</span> <span class="g">INFO</span>  Source: vendor_prices.csv<br>
-<span class="b">[2026-04-08 06:00:02]</span> <span class="g">INFO</span>  Rows read: 3,421<br>
-<span class="b">[2026-04-08 06:00:03]</span> <span class="y">WARN</span>  12 prices outside tolerance<br>
-<span class="b">[2026-04-08 06:00:04]</span> <span class="g">INFO</span>  Validation passed: 3,409<br>
-<span class="b">[2026-04-08 06:00:05]</span> <span class="g">INFO</span>  Output: x3_price_import.csv<br>
-<span class="b">[2026-04-08 06:00:05]</span> <span class="g">DONE</span>  Exit code: 0
+
+          <div class="svc-card fade-up" id="customers">
+            <div class="svc-icon">🏢</div>
+            <h3>Customers</h3>
+            <div class="svc-price">$4,500</div>
+            <div class="svc-price-note">Fixed fee · 1 module</div>
+            <div class="svc-check-list" style="margin-top:var(--s-4);">
+              <div class="svc-check-item">BPCUSTOMER field mapping (BPCNUM, BPCNAM, address)</div>
+              <div class="svc-check-item">Deduplication and code normalisation</div>
+              <div class="svc-check-item">State codes, country codes, payment terms aligned</div>
+              <div class="svc-check-item">Validated, import-ready CSV + PDF import guide</div>
+              <div class="svc-check-item">1 free revision round within 7 days</div>
             </div>
           </div>
+
+          <div class="svc-card fade-up" id="suppliers">
+            <div class="svc-icon">🚚</div>
+            <h3>Suppliers</h3>
+            <div class="svc-price">$4,500</div>
+            <div class="svc-price-note">Fixed fee · 1 module</div>
+            <div class="svc-check-list" style="margin-top:var(--s-4);">
+              <div class="svc-check-item">BPSUPPLIER field mapping (BPSNUM, BPSNAM, address)</div>
+              <div class="svc-check-item">Deduplication and code normalisation</div>
+              <div class="svc-check-item">Currency, payment terms, and country codes aligned</div>
+              <div class="svc-check-item">Validated, import-ready CSV + PDF import guide</div>
+              <div class="svc-check-item">1 free revision round within 7 days</div>
+            </div>
+          </div>
+
         </div>
+
+        <!-- Combined package + Retainer -->
+        <div class="grid-2" style="max-width:900px; margin-inline:auto;">
+
+          <div class="svc-card svc-card--featured fade-up" id="combined">
+            <div class="svc-badge">Best value</div>
+            <div class="svc-icon">🗂️</div>
+            <h3>Combined Package</h3>
+            <p style="color:var(--c-gray-500); font-size:var(--text-sm); margin-bottom:var(--s-2);">Products + Customers + Suppliers</p>
+            <div class="svc-price">$6,500 – $8,500</div>
+            <div class="svc-price-note">Fixed fee · all three modules · price confirmed within 1 business day</div>
+            <div class="svc-check-list" style="margin-top:var(--s-4);">
+              <div class="svc-check-item">All three modules in one project, one fixed price</div>
+              <div class="svc-check-item">Cross-dataset deduplication (customers vs. suppliers reconciled)</div>
+              <div class="svc-check-item">One validated CSV per module + PDF import guide per module</div>
+              <div class="svc-check-item">Migration readiness report — zero critical errors before you import</div>
+              <div class="svc-check-item">1 free revision round within 7 days of delivery</div>
+            </div>
+          </div>
+
+          <div class="svc-card svc-card--outline fade-up" id="retainer">
+            <div class="svc-icon">🔄</div>
+            <h3>Quarterly Retainer</h3>
+            <div class="svc-price">$1,800<span style="font-size:var(--text-xl); font-weight:500;">/month</span></div>
+            <div class="svc-price-note">Up to 2 projects per quarter · recurring data needs</div>
+            <div class="svc-check-list" style="margin-top:var(--s-4);">
+              <div class="svc-check-item">Up to 2 single-module projects per quarter</div>
+              <div class="svc-check-item">Priority turnaround — ahead of one-off requests</div>
+              <div class="svc-check-item">Reusable, documented Python scripts you own outright</div>
+              <div class="svc-check-item">Validated output on every run — same logic, same error reporting</div>
+              <div class="svc-check-item">Best fit for clients with recurring or ongoing data conversion needs</div>
+            </div>
+            <a href="contact.html" class="btn btn-secondary" style="margin-top:var(--s-6); display:inline-block;">Get in touch to discuss &rarr;</a>
+          </div>
+
+        </div>
+
+        <p style="text-align:center; color:var(--c-gray-500); font-size:var(--text-sm); margin-top:var(--s-8);">
+          All prices are fixed-fee. Final price confirmed within 1 business day of receiving your Sage X3 import template. 50% deposit to begin, 50% on delivery.
+        </p>
       </div>
-    </div>
+    </section>
 
     <!-- ═══════════════════════════════════════════════════════════
          INDUSTRY EXPERIENCE
@@ -303,7 +232,7 @@ Warnings (flagged):   <span class="y">23</span>  (see report)<br>
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="footer-logo">
-            <img src="assets/logo/concepts/concept_02_flame_wordmark.svg" alt="ForgeMend" class="footer-logo-img" />
+            <img src="assets/logo/concepts/concept_02_flame_wordmark.svg" alt="ForgeMend" class="footer-logo-img" style="filter: brightness(1.15) saturate(1.3);" />
           </a>
           <p class="footer-tagline">Sage X3 data operations specialist · Remote services across North America.</p>
           <div class="footer-contact-links">
@@ -313,9 +242,9 @@ Warnings (flagged):   <span class="y">23</span>  (see report)<br>
         <div>
           <div class="footer-col-title">Services</div>
           <div class="footer-col-links">
-            <a href="services.html#single-module">Single-module conversion</a>
-            <a href="services.html#full-migration">Full migration package</a>
-            <a href="services.html#pipelines">Custom pipelines</a>
+            <a href="services.html#products">Products / items</a>
+            <a href="services.html#combined">Combined package</a>
+            <a href="services.html#retainer">Quarterly retainer</a>
           </div>
         </div>
         <div>
