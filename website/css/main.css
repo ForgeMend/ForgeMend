@@ -1171,6 +1171,54 @@ p:last-child { margin-bottom: 0; }
 #form-success h3 { color: var(--c-success); margin-bottom: var(--s-2); }
 #form-success p  { color: var(--c-gray-600); margin: 0; }
 
+.form-hint {
+  font-size: 12px;
+  color: var(--c-gray-500);
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+.form-checkbox-group,
+.form-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-checkbox-item,
+.form-radio-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 0.5px solid var(--c-gray-200);
+  border-radius: var(--r-lg);
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--c-gray-700);
+  line-height: 1.5;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.form-checkbox-item:hover,
+.form-radio-item:hover {
+  border-color: var(--c-gray-400);
+  background: var(--c-gray-50);
+}
+
+.form-checkbox-item input,
+.form-radio-item input {
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--c-amber);
+}
+
+.form-checkbox-item input[type="file"] {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
 /* ──────────────────────────────────────────────────────────
    17. FOOTER
    ────────────────────────────────────────────────────────── */
