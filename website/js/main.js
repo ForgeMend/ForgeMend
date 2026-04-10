@@ -78,45 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ── Contact form submission (Netlify Forms / Formspree) ─────
-  const form = document.getElementById('contact-form');
-  const formSuccess = document.getElementById('form-success');
-
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      const btn = form.querySelector('[type="submit"]');
-      const originalLabel = btn.textContent;
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-
-      try {
-        const res = await fetch(form.action || window.location.pathname, {
-          method: 'POST',
-          headers: { Accept: 'application/json' },
-          body: new FormData(form),
-        });
-
-        if (res.ok) {
-          form.style.display = 'none';
-          if (formSuccess) formSuccess.style.display = 'block';
-        } else {
-          throw new Error(`HTTP ${res.status}`);
-        }
-      } catch (err) {
-        console.error('Form error:', err);
-        btn.textContent = 'Error — please email info@forgemend.com';
-        btn.style.background = '#DC2626';
-        setTimeout(() => {
-          btn.textContent = originalLabel;
-          btn.style.background = '';
-          btn.disabled = false;
-        }, 5000);
-      }
-    });
-  }
-
   // ── Smooth scroll for in-page anchors ──────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {

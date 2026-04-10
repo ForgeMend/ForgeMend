@@ -5,7 +5,7 @@
    Fonts: Montserrat (headings) | Inter (body)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800;900&family=JetBrains+Mono:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&family=Montserrat:wght@600;700;800;900&display=swap');
 
 /* ──────────────────────────────────────────────────────────
    1. DESIGN TOKENS
@@ -36,8 +36,8 @@
 
   /* Typography */
   --font-heading: 'Montserrat', 'Arial Black', sans-serif;
-  --font-body:    'Inter', 'Helvetica Neue', Arial, sans-serif;
-  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+  --font-mono:    'DM Mono', 'Courier New', monospace;
 
   /* Fluid font sizes */
   --text-xs:   0.75rem;
@@ -76,6 +76,15 @@
   /* Transitions */
   --t-fast: 150ms ease;
   --t-base: 250ms ease;
+
+  /* Forge fire palette */
+  --c-forge-red:      #DC2626;
+  --c-forge-orange:   #EA580C;
+  --c-forge-yellow:   #EAB308;
+  --c-forge-gradient: linear-gradient(135deg, #DC2626 0%, #EA580C 50%, #EAB308 100%);
+  --c-surface-dark:   #0F1929;
+  --c-surface-card:   rgba(255,255,255,0.03);
+  --glow-amber:       0 0 24px rgba(217,119,6,0.15);
 }
 
 /* ──────────────────────────────────────────────────────────
@@ -138,6 +147,10 @@ p:last-child { margin-bottom: 0; }
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--c-amber);
+  background: var(--c-forge-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: var(--s-3);
 }
 
@@ -210,15 +223,31 @@ p:last-child { margin-bottom: 0; }
 }
 
 .btn-primary {
-  background: var(--c-amber);
+  background: linear-gradient(135deg, #D97706, #B45309);
   color: var(--c-white);
   box-shadow: 0 3px 0 #92400e, var(--sh-md);
+  position: relative;
+  overflow: hidden;
 }
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+  transition: left 0.4s ease;
+}
+
 .btn-primary:hover {
-  background: var(--c-amber-light);
+  background: linear-gradient(135deg, #F59E0B, #D97706);
   color: var(--c-white);
   transform: translateY(-2px);
-  box-shadow: 0 5px 0 #92400e, var(--sh-lg);
+  box-shadow: 0 8px 24px rgba(217,119,6,.35), 0 3px 0 #92400e;
+}
+
+.btn-primary:hover::after {
+  left: 100%;
 }
 
 .btn-secondary {
@@ -413,14 +442,14 @@ p:last-child { margin-bottom: 0; }
   pointer-events: none;
 }
 
-/* Subtle grid overlay */
+/* Subtle amber-tinted grid overlay */
 .hero::after {
   content: '';
   position: absolute; inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-  background-size: 56px 56px;
+    linear-gradient(rgba(217,119,6,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(217,119,6,.05) 1px, transparent 1px);
+  background-size: 60px 60px;
   pointer-events: none;
 }
 
@@ -460,6 +489,12 @@ p:last-child { margin-bottom: 0; }
   width: 6px; height: 6px;
   background: var(--c-amber);
   border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
 }
 
 .hero h1 {
@@ -517,14 +552,17 @@ p:last-child { margin-bottom: 0; }
 
 .term-card {
   background: rgba(255,255,255,.055);
-  border: 1px solid rgba(255,255,255,.09);
+  border: 1px solid rgba(217,119,6,.2);
   border-radius: var(--r-xl);
   overflow: hidden;
   backdrop-filter: blur(4px);
+  box-shadow: 0 0 0 1px rgba(217,119,6,.05),
+              0 20px 40px rgba(0,0,0,.3);
 }
 
 .term-card-header {
-  background: rgba(0,0,0,.25);
+  background: rgba(217,119,6,.08);
+  border-bottom: 1px solid rgba(217,119,6,.15);
   padding: .6rem var(--s-5);
   display: flex;
   align-items: center;
@@ -539,8 +577,9 @@ p:last-child { margin-bottom: 0; }
 
 .term-card-header .dot {
   width: 8px; height: 8px;
-  background: var(--c-amber);
+  background: var(--c-forge-orange);
   border-radius: 50%;
+  box-shadow: 0 0 6px var(--c-forge-orange);
 }
 
 .term-card-body {
@@ -580,7 +619,7 @@ p:last-child { margin-bottom: 0; }
   gap: var(--s-2);
   font-family: var(--font-heading);
   font-size: var(--text-sm);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--c-gray-600);
 }
 
@@ -595,13 +634,29 @@ p:last-child { margin-bottom: 0; }
   border: 1px solid var(--c-gray-200);
   border-radius: var(--r-xl);
   padding: var(--s-8);
+  position: relative;
+  overflow: hidden;
   transition: transform var(--t-base), box-shadow var(--t-base), border-color var(--t-base);
+}
+
+.svc-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--c-forge-gradient);
+  opacity: 0;
+  transition: opacity var(--t-base);
 }
 
 .svc-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--sh-xl);
+  box-shadow: 0 12px 40px rgba(0,0,0,.12), var(--glow-amber);
   border-color: var(--c-gray-300);
+}
+
+.svc-card:hover::before {
+  opacity: 1;
 }
 
 .svc-icon {
@@ -826,7 +881,7 @@ p:last-child { margin-bottom: 0; }
 .step-num {
   width: 60px; height: 60px;
   border-radius: 50%;
-  background: var(--c-navy);
+  background: var(--c-forge-gradient);
   color: var(--c-white);
   font-family: var(--font-heading);
   font-size: var(--text-2xl);
@@ -835,6 +890,7 @@ p:last-child { margin-bottom: 0; }
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--s-5);
+  box-shadow: 0 4px 12px rgba(217,119,6,.3);
 }
 
 .step h3 { font-size: var(--text-lg); margin-bottom: var(--s-2); }
@@ -1228,6 +1284,8 @@ p:last-child { margin-bottom: 0; }
   color: rgba(255,255,255,.55);
   padding-top: var(--s-16);
   padding-bottom: var(--s-10);
+  border-top: 3px solid;
+  border-image: linear-gradient(135deg, #DC2626 0%, #EA580C 50%, #EAB308 100%) 1;
 }
 
 .footer-grid {

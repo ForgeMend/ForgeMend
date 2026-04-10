@@ -4,6 +4,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 70" width="400" height="70" role="img" aria-label="ForgeMend Flame Wordmark Logo">
   <title>ForgeMend — Flame Wordmark (White)</title>
 
+  <defs>
+    <linearGradient id="forgeGradWhite" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#F87171"/>
+      <stop offset="50%" stop-color="#FB923C"/>
+      <stop offset="100%" stop-color="#FDE047"/>
+    </linearGradient>
+  </defs>
+
   <!-- ── FLAME ICON ── -->
   <g transform="translate(6, 5)">
     <!-- Outer flame body — amber (kept for brand recognition) -->
@@ -35,13 +43,13 @@
   </g>
 
   <!-- ── WORDMARK — white text for dark backgrounds ── -->
-  <!-- "Forge" in white -->
+  <!-- "Forge" with glowing forge gradient for dark backgrounds -->
   <text
     x="58" y="44"
     font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
     font-weight="900"
     font-size="36"
-    fill="#FFFFFF"
+    fill="url(#forgeGradWhite)"
     letter-spacing="-0.5"
   >Forge</text>
 
