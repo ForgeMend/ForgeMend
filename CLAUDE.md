@@ -15,14 +15,66 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```
 ForgeMend/
 ├── data/           # Data engineering: scripts, imports, exports, logs
-├── website/        # Business website source and assets
+├── website/        # Business website — static HTML/CSS/JS, no build step
 ├── legal/          # Legal templates and disclaimers
 ├── contracts/      # Client contracts (templates + signed copies)
 ├── crm/            # Lead tracking, campaigns, CRM workflows
-└── accounting/     # Invoices, expenses, financial records
+├── accounting/     # Invoices, expenses, financial records
+├── brand-guidelines.md  # Colors, typography, logo usage
+├── netlify.toml    # Netlify deploy config (publish dir, headers, redirects)
+└── vercel.json     # Vercel deploy config (alternative host)
 ```
 
 **Rule:** All files stay within these subfolders unless explicitly directed otherwise.
+
+---
+
+## Website Development
+
+### Local Development
+```bash
+cd website
+python -m http.server 8000
+# Open: http://localhost:8000
+```
+No build step, no dependencies, no bundler. Edit HTML/CSS/JS directly.
+
+### Deploy
+Push to `main` → Netlify auto-deploys within ~30 seconds. Publish directory is `website/`.
+
+### Website Architecture
+- **Single shared stylesheet:** `website/css/main.css`
+- **Single shared script:** `website/js/main.js`
+- **HTML pages live directly in `website/`** (not in `website/src/`)
+- Current pages: `index.html`, `services.html`, `about.html`, `contact.html`, `thank-you.html`, `privacy.html`, `terms.html`
+- `sitemap.xml` and `robots.txt` are in `website/` — update `sitemap.xml` whenever pages are added or significantly changed
+
+### Contact Form
+The form in `contact.html` uses Netlify Forms (`data-netlify="true"`). No backend code needed — Netlify handles submission and emails `info@forgemend.com`. The `thank-you` route is handled by a Netlify redirect back to `contact.html` with a 200 status.
+
+### SEO & Metadata Checklist (for any new page)
+Every HTML page must have: `<title>`, `<meta description>`, `<link rel="canonical">`, Open Graph tags, and an entry in `sitemap.xml`.
+
+---
+
+## Brand
+
+Full details in `brand-guidelines.md`. Key values:
+
+**Colors:**
+| Token         | Hex       | Usage                          |
+|---------------|-----------|--------------------------------|
+| Navy          | `#1B2D5B` | Primary — headings, nav, dark sections |
+| Navy Dark     | `#0F1D3D` | Footer, deep backgrounds       |
+| Steel Blue    | `#2D6A9F` | Links, interactive elements    |
+| Forge Amber   | `#D97706` | Primary CTA, accent, icons     |
+| Amber Light   | `#F59E0B` | Hover on amber elements        |
+| Gray 800      | `#1E293B` | Body text                      |
+| Gray 600      | `#475569` | Secondary text                 |
+
+**Fonts:** Montserrat (headings, 700/800) · Inter (body, 400/500) — both from Google Fonts. JetBrains Mono for code/data output.
+
+**Tagline:** *Built for the Data Behind Your ERP*
 
 ---
 
@@ -69,8 +121,10 @@ brand: ForgeMend
 tone: professional, modern, trustworthy
 rules_file: .claude/rules/digital-assets.md
 key_paths:
-  website:  website/src/
+  website:  website/        # HTML pages live here directly (not website/src/)
   assets:   website/assets/
+  css:      website/css/
+  js:       website/js/
 ```
 
 ### domain: accounting
