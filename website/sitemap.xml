@@ -25,6 +25,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://forgemend.com/case-studies/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://forgemend.com/case-studies/sage-x3-food-distributor-product-import/</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://forgemend.com/privacy.html</loc>
     <lastmod>2026-04-10</lastmod>
     <changefreq>yearly</changefreq>

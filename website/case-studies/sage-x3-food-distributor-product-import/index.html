@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Sage X3 Product Import Case Study — Food and Seafood Distribution | ForgeMend</title>
+  <meta name="description" content="A food and seafood distributor with ~5,000 active product records. Legacy ERP to Sage X3. Failed imports, UOM hierarchy violations, catch-weight complexity. Fixed." />
+  <link rel="canonical" href="https://forgemend.com/case-studies/sage-x3-food-distributor-product-import/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://forgemend.com/case-studies/sage-x3-food-distributor-product-import/" />
+  <meta property="og:title"       content="Sage X3 Product Import Case Study — Food and Seafood Distribution | ForgeMend" />
+  <meta property="og:description" content="5,000 SKUs. Catch-weight UOM complexity. Failed imports. Here is what the data actually looked like and how it was fixed." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/logo/forgemend_icon_v2.svg" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../css/main.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════════ -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="../../index.html" class="nav-logo" aria-label="ForgeMend home">
+          <img src="../../assets/logo/forgemend_logo_v2_dark.svg" alt="ForgeMend" class="nav-logo-img" />
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="../../index.html"    class="nav-link">Home</a></li>
+          <li><a href="../../services.html" class="nav-link">Services</a></li>
+          <li><a href="../"                 class="nav-link active">Case Studies</a></li>
+          <li><a href="../../about.html"    class="nav-link">About</a></li>
+          <li><a href="../../contact.html"  class="nav-cta">Contact Us</a></li>
+        </ul>
+
+        <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <nav class="nav-mobile" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+      <a href="../../index.html"    class="nav-link">Home</a>
+      <a href="../../services.html" class="nav-link">Services</a>
+      <a href="../"                 class="nav-link">Case Studies</a>
+      <a href="../../about.html"    class="nav-link">About</a>
+      <a href="../../contact.html"  class="nav-cta btn">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         PAGE HEADER
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="page-header" aria-label="Case study header">
+      <div class="container">
+        <div class="page-header-content">
+          <span class="eyebrow">Case Study</span>
+          <h1>Rescuing a 5,000-SKU Sage X3 Product Import at a Food and Seafood Distributor</h1>
+
+          <div class="cs-fact-chips">
+            <div class="cs-fact-chip">
+              <div class="cs-fact-label">Industry</div>
+              <div class="cs-fact-value">Food &amp; seafood distribution</div>
+            </div>
+            <div class="cs-fact-chip">
+              <div class="cs-fact-label">Migration</div>
+              <div class="cs-fact-value">Legacy ERP &rarr; Sage X3</div>
+            </div>
+            <div class="cs-fact-chip">
+              <div class="cs-fact-label">Scope</div>
+              <div class="cs-fact-value">~5,000 product records</div>
+            </div>
+            <div class="cs-fact-chip">
+              <div class="cs-fact-label">Service</div>
+              <div class="cs-fact-value">Product data cleanup &amp; import prep</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         AT A GLANCE
+    ═══════════════════════════════════════════════════════════ -->
+    <div class="cs-glance-outer">
+      <div class="container">
+        <div class="cs-glance-box fade-up">
+          <span class="eyebrow">At a glance</span>
+          <ul class="cs-glance-list">
+            <li>Failed imports on misplaced indicators and partial load errors</li>
+            <li>UOM hierarchy violations across a catch-weight catalog</li>
+            <li>Source file rebuilt against X3 rules before re-import</li>
+            <li>Repeatable load process established; X3 rollout became viable</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         BODY CONTENT
+    ═══════════════════════════════════════════════════════════ -->
+    <div class="cs-body-outer">
+      <div class="container">
+        <div class="cs-body">
+
+          <h3 class="cs-section-h">Client Profile</h3>
+          <p>A food distribution business serving restaurants and independent grocers, with roughly 5,000 active product records across frozen seafood, fresh proteins, dry goods, and packaged items. The catalog carried the UOM complexity this industry is known for. Products purchased in PC but received by weight. Items sold by the piece but stocked by the case. Catch-weight products with their own configuration rules. A unit vocabulary that ran CT, PL, CS, BOX, PK, EA, LB, KG, and more. Conversion coefficients were often missing from structured fields and buried inside product descriptions instead.</p>
+
+          <h3 class="cs-section-h">What Went Wrong on Import</h3>
+          <p>The first attempts failed on misplaced indicators. The whole file rejected. In X3's import format, the last row of the text file has to be empty, field separators have to match the template exactly, and any column shifted against the X3 import/export layout kills the load.</p>
+          <p>When the file structure was corrected, the failures changed shape rather than going away. Some products imported. Others bounced out of the error log for a mix of reasons: invalid UOM codes, referenced values that had not been set up in X3 yet, and Excel corrupting the source file on save. Leading zeros were stripped from codes. Item codes like MAY1234 came through as dates.</p>
+
+          <h3 class="cs-section-h">What the Source Data Actually Looked Like</h3>
+          <p>Once the files were opened and compared against the template, the picture was clearer. Field mapping did not line up with the X3 import/export template. Columns had shifted during earlier rounds of manual copy-paste and VLOOKUP work, and nobody had caught it. The text-file conversion format and the field separators were wrong. Legacy UOM abbreviations — lbs, box, bag — did not match X3's required values, which wanted lb, bx, bg. And stock units in the legacy system were not the smallest unit used per product, which is something X3 requires. That one detail was throwing off conversion coefficients and, downstream, pricing.</p>
+          <p>Pack weights and conversion ratios existed, but only inside free-text descriptions. Not in structured fields where an import expects to find them.</p>
+
+          <h3 class="cs-section-h">The Cleanup</h3>
+          <p>Migration tools exist. None of them decide for you that stock unit has to be the smallest unit in the hierarchy, or that PC does not belong on a non-catch-weight product. Those are catalog-specific judgment calls, and they have to be applied consistently across every record.</p>
+          <p>The work went in this order:</p>
+          <ol>
+            <li>Field mapping rebuilt against the X3 import template</li>
+            <li>UOM values cross-referenced to X3's unit list and normalized (lbs &rarr; lb, box &rarr; bx, bag &rarr; bg)</li>
+            <li>X3 rules applied catalog-wide: stock unit as the smallest unit used, pack unit never equal to stock, no PC on non-catch-weight items</li>
+            <li>Pack coefficients and product weights extracted from the free-text descriptions</li>
+            <li>Irregular characters that break text-file exports stripped (commas, asterisks, stray quotes)</li>
+            <li>Records that could not be resolved cleanly flagged for local staff to review before import, rather than guessed</li>
+          </ol>
+
+          <h3 class="cs-section-h">Outcome</h3>
+          <p>Imports started running with only rare errors, and the load process became repeatable. That last part mattered more than the first import itself. Clean product data in X3 put the business on realistic ground to roll the system out to additional locations, which had been the plan all along but had not felt viable while the core catalog was still failing to load.</p>
+
+          <h3 class="cs-section-h">One Thing Worth Knowing</h3>
+          <p>Tooling handles file movement. It does not decide what "correct" looks like for your catalog. That part is the work.</p>
+
+          <div class="cs-pull-quote">
+            <blockquote>"We kept thinking if we just got the data in, we could clean it up inside X3 later. That was the wrong instinct. Fixing it after import was harder every time."</blockquote>
+            <cite>— Illustrative quote, reflecting an operations-manager perspective in this type of migration</cite>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CTA BAND
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="cta-band" aria-labelledby="cs-cta-heading">
+      <div class="container">
+        <div class="cta-band-inner">
+          <h2 id="cs-cta-heading">Facing a similar Sage X3 import situation?</h2>
+          <p>Fixed-price cleanup engagements. Price confirmed within 1 business day.</p>
+          <div class="cta-band-actions">
+            <a href="../../contact.html" class="btn btn-primary btn-lg">Get in touch &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../../index.html" class="footer-logo" aria-label="ForgeMend home">
+            <img src="../../assets/logo/forgemend_logo_v2_white.svg" alt="ForgeMend" class="footer-logo-img" />
+          </a>
+          <p class="footer-tagline">Sage X3 data operations specialist · Remote services across North America.</p>
+          <div class="footer-contact-links">
+            <a href="mailto:info@forgemend.com" class="footer-contact-link">
+              📧 info@forgemend.com
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Services</div>
+          <div class="footer-col-links">
+            <a href="../../services.html#products">Products / items</a>
+            <a href="../../services.html#combined">Combined package</a>
+            <a href="../../services.html#export-analysis">Export data analysis</a>
+            <a href="../../services.html#retainer">Quarterly retainer</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Company</div>
+          <div class="footer-col-links">
+            <a href="../../about.html">About ForgeMend</a>
+            <a href="../../contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Get Started</div>
+          <div class="footer-col-links">
+            <a href="mailto:info@forgemend.com">info@forgemend.com</a>
+            <a href="../../contact.html">Submit a project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 ForgeMend LLC. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="../../privacy.html">Privacy Policy</a>
+          <a href="../../terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js" defer></script>
+</body>
+</html>
