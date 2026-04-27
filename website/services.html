@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -11,8 +11,12 @@
 
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://forgemend.com/services.html" />
-  <meta property="og:title"       content="Sage X3 Data Conversion &amp; Cleanup — Services | ForgeMend" />
-  <meta property="og:description" content="We take your messy ERP exports and your Sage X3 templates and deliver validated, import-ready CSV files — mapped to your exact environment." />
+  <meta property="og:title"       content="Services &amp; Pricing — Sage X3 Data Conversion | ForgeMend" />
+  <meta property="og:description" content="Fixed-fee Sage X3 data conversion: products, customers, suppliers. Price confirmed within 1 business day." />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Services &amp; Pricing — Sage X3 Data Conversion | ForgeMend" />
+  <meta name="twitter:description" content="Fixed-fee Sage X3 data conversion: products, customers, suppliers. Price confirmed within 1 business day." />
+  <meta name="twitter:image"       content="https://forgemend.com/assets/og-image.png" />
   <meta property="og:image"       content="https://forgemend.com/assets/og-image.png" />
 
   <link rel="icon" type="image/svg+xml" href="assets/logo/forgemend_icon_v2.svg" />
@@ -20,6 +24,51 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&family=Montserrat:wght@600;700;800;900&display=swap" />
   <link rel="stylesheet" href="css/main.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "ForgeMend",
+    "description": "Sage X3 data conversion and cleanup services. We deliver validated, import-ready CSV files mapped to your exact Sage X3 environment.",
+    "url": "https://forgemend.com",
+    "email": "info@forgemend.com",
+    "telephone": "+1-617-299-9859",
+    "areaServed": "North America",
+    "serviceType": "Data Conversion and Cleanup",
+    "priceRange": "$490 - $10,500",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Sage X3 Data Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Single Module Conversion",
+            "description": "One module — Products, Customers, or Suppliers — converted to import-ready Sage X3 CSV."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Combined Package",
+            "description": "Products, Customers, and Suppliers in one project with cross-dataset deduplication."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Export Data Analysis",
+            "description": "Raw Sage X3 export processed into a clean, structured, deduplicated CSV."
+          }
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -33,7 +82,7 @@
         <ul class="nav-links" role="list">
           <li><a href="index.html"        class="nav-link">Home</a></li>
           <li><a href="services.html"    class="nav-link active">Services</a></li>
-          <li><a href="case-studies/"    class="nav-link">Case Studies</a></li>
+          <li><a href="case-studies/"    class="nav-link">Case Study</a></li>
           <li><a href="about.html"       class="nav-link">About</a></li>
           <li><a href="contact.html"  class="nav-cta">Contact Us</a></li>
         </ul>
@@ -45,7 +94,7 @@
     <nav class="nav-mobile" id="mobile-nav" aria-label="Mobile navigation">
       <a href="index.html"     class="nav-link">Home</a>
       <a href="services.html"  class="nav-link">Services</a>
-      <a href="case-studies/"  class="nav-link">Case Studies</a>
+      <a href="case-studies/"  class="nav-link">Case Study</a>
       <a href="about.html"     class="nav-link">About</a>
       <a href="contact.html"   class="nav-cta btn">Contact Us</a>
     </nav>
@@ -79,7 +128,7 @@
         <div class="grid-3" style="margin-bottom:var(--s-6);">
 
           <div class="svc-card fade-up" id="products">
-            <div class="svc-icon">📦</div>
+            <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
             <h3>Products / Items</h3>
             <div class="svc-price">$4,500 – $5,500</div>
             <div class="svc-price-note">Fixed fee · 1 module</div>
@@ -94,7 +143,7 @@
           </div>
 
           <div class="svc-card fade-up" id="customers">
-            <div class="svc-icon">🏢</div>
+            <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="2" width="18" height="20" rx="1"/><line x1="9" y1="22" x2="9" y2="14"/><line x1="15" y1="22" x2="15" y2="14"/><rect x="9" y="14" width="6" height="8"/><rect x="6" y="6" width="4" height="4"/><rect x="14" y="6" width="4" height="4"/></svg></div>
             <h3>Customers</h3>
             <div class="svc-price">$2,900 – $3,900</div>
             <div class="svc-price-note">Fixed fee · 1 module</div>
@@ -108,7 +157,7 @@
           </div>
 
           <div class="svc-card fade-up" id="suppliers">
-            <div class="svc-icon">🚚</div>
+            <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
             <h3>Suppliers</h3>
             <div class="svc-price">$2,900 – $3,900</div>
             <div class="svc-price-note">Fixed fee · 1 module</div>
@@ -128,7 +177,7 @@
 
           <div class="svc-card svc-card--featured fade-up" id="combined">
             <div class="svc-badge">Best value</div>
-            <div class="svc-icon">🗂️</div>
+            <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
             <h3>Combined Package</h3>
             <p style="color:rgba(255,255,255,0.6); font-size:var(--text-sm); margin-bottom:var(--s-2);">Products + Customers + Suppliers</p>
             <div class="svc-price" style="color:var(--c-amber-light)">$8,500 – $10,500</div>
@@ -143,7 +192,7 @@
           </div>
 
           <div class="svc-card svc-card--outline fade-up" id="retainer">
-            <div class="svc-icon">🔄</div>
+            <div class="svc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
             <h3>Quarterly Retainer</h3>
             <div class="svc-price">$1,800<span style="font-size:var(--text-xl); font-weight:500;">/month</span></div>
             <div class="svc-price-note">Up to 2 projects per quarter · recurring data needs</div>
@@ -238,7 +287,7 @@
     <section class="fnb" id="fnb" aria-labelledby="fnb-services-heading">
       <div class="container">
         <div style="max-width:720px; margin-inline:auto; text-align:center;">
-          <div class="fnb-label" style="margin-inline:auto;">🍽️ Industry Experience</div>
+          <div class="fnb-label" style="margin-inline:auto;"><svg style="vertical-align:middle; margin-right:6px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg> Industry Experience</div>
           <h2 id="fnb-services-heading" style="color:var(--c-white);">Food &amp; beverage and manufacturing</h2>
           <p style="color:rgba(255,255,255,.72); font-size:var(--text-lg); line-height:1.75; margin-bottom:var(--s-8);">
             Food &amp; beverage manufacturers often have complex UOM structures, multiple units
@@ -251,6 +300,7 @@
             and UOM hierarchies that need to map correctly before anything goes live in Sage X3.
           </p>
           <a href="contact.html" class="btn btn-primary btn-lg">Start your project &rarr;</a>
+          <p style="margin-top:var(--s-5); font-size:var(--text-sm); color:rgba(255,255,255,.5);">Prefer to talk first? <a href="https://calendly.com/forgemend-info/15min" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,.7); text-decoration:underline; text-underline-offset:3px;">Book a 15-min scope call &rarr;</a></p>
         </div>
       </div>
     </section>
@@ -485,6 +535,7 @@
             <a href="contact.html" class="btn btn-primary btn-lg">Start your project &rarr;</a>
             <a href="about.html"   class="cta-band-text-link">About ForgeMend</a>
           </div>
+          <p style="margin-top:var(--s-5); font-size:var(--text-sm); color:rgba(255,255,255,.55);">Prefer to talk first? <a href="https://calendly.com/forgemend-info/15min" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,.75); text-decoration:underline; text-underline-offset:3px;">Book a 15-min scope call &rarr;</a></p>
         </div>
       </div>
     </section>
@@ -516,6 +567,7 @@
           <div class="footer-col-title">Company</div>
           <div class="footer-col-links">
             <a href="about.html">About</a>
+            <a href="case-studies/">Case Study</a>
             <a href="contact.html">Contact</a>
           </div>
         </div>
@@ -523,6 +575,8 @@
           <div class="footer-col-title">Get Started</div>
           <div class="footer-col-links">
             <a href="mailto:info@forgemend.com">info@forgemend.com</a>
+            <a href="https://calendly.com/forgemend-info/15min" target="_blank" rel="noopener noreferrer">Book a scope call &rarr;</a>
+            <a href="tel:+16172999859" style="color:var(--c-gray-400); font-size:var(--text-sm);">+1 617-299-9859</a>
             <a href="contact.html">Submit a project</a>
           </div>
         </div>
