@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Sage X3 Import Checklist | ForgeMend</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo/forgemend_icon_v2.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&family=Montserrat:wght@600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="ForgeMend home">
+          <img src="assets/logo/forgemend_logo_v2_dark.svg"
+               alt="ForgeMend" class="nav-logo-img" width="160" height="42" />
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html"     class="nav-link">Home</a></li>
+          <li><a href="services.html"  class="nav-link">Services</a></li>
+          <li><a href="case-studies/"  class="nav-link">Case Studies</a></li>
+          <li><a href="about.html"     class="nav-link">About</a></li>
+          <li><a href="contact.html"   class="nav-cta">Contact Us</a></li>
+        </ul>
+        <button class="nav-hamburger" aria-label="Toggle menu"
+                aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <nav class="nav-mobile" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="case-studies/" class="nav-link">Case Studies</a>
+      <a href="about.html"    class="nav-link">About</a>
+      <a href="contact.html"  class="nav-cta btn">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div style="max-width:520px; margin-inline:auto; text-align:center;">
+
+          <span class="eyebrow">Free Resource</span>
+          <h1 style="font-size:var(--text-3xl); margin-bottom:var(--s-4);">
+            The Sage X3 Import Gotcha Checklist
+          </h1>
+          <p style="color:var(--c-gray-600); font-size:var(--text-lg);
+             line-height:1.75; margin-bottom:var(--s-8);">
+            8 problems that break most Sage X3 migrations — and the exact
+            fix for each. Enter your work email and it downloads immediately.
+          </p>
+
+          <div class="contact-form-wrap" style="text-align:left;">
+            <form
+              name="checklist-download"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/checklist-thank-you.html"
+            >
+              <input type="hidden" name="form-name" value="checklist-download" />
+              <p style="display:none;">
+                <label>Don't fill this: <input name="bot-field" /></label>
+              </p>
+
+              <div class="form-group">
+                <label class="form-label" for="cl-name">
+                  First Name <span class="req">*</span>
+                </label>
+                <input class="form-input" type="text" id="cl-name"
+                  name="first_name" required placeholder="Jane" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cl-email">
+                  Work Email <span class="req">*</span>
+                </label>
+                <input class="form-input" type="email" id="cl-email"
+                  name="email" required placeholder="jane@yourcompany.com" />
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg"
+                style="width:100%; margin-top:var(--s-4);">
+                Send me the checklist &rarr;
+              </button>
+
+              <p style="margin-top:var(--s-3); font-size:var(--text-xs);
+                 color:var(--c-gray-400); text-align:center;">
+                No spam. No follow-up calls. Unsubscribe any time.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; 2026 ForgeMend LLC. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -14,8 +14,12 @@
   <meta property="og:url"         content="https://forgemend.com/contact.html" />
   <meta property="og:title"       content="Start Your Sage X3 Data Project | ForgeMend" />
   <meta property="og:description" content="Submit your Sage X3 data conversion project. Upload your import template — we'll confirm a fixed price within 1 business day. No calls required for smaller projects." />
+  <meta property="og:image"       content="https://forgemend.com/assets/og-image.png" />
 
   <link rel="icon" type="image/svg+xml" href="assets/logo/forgemend_icon_v2.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&family=Montserrat:wght@600;700;800;900&display=swap" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
@@ -25,7 +29,7 @@
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="index.html" class="nav-logo" aria-label="ForgeMend home">
-          <img src="assets/logo/forgemend_logo_v2_dark.svg" alt="ForgeMend" class="nav-logo-img" />
+          <img src="assets/logo/forgemend_logo_v2_dark.svg" alt="ForgeMend" class="nav-logo-img" width="160" height="42" />
         </a>
         <ul class="nav-links" role="list">
           <li><a href="index.html"        class="nav-link">Home</a></li>
@@ -112,7 +116,7 @@
             <div style="margin-top: var(--s-10); padding: var(--s-6); background: var(--c-amber-pale); border-radius: var(--r-xl); border: 1px solid rgba(217,119,6,.2);">
               <h3 style="font-size:var(--text-lg); margin-bottom:var(--s-3); color:var(--c-amber);">What Happens After You Submit</h3>
               <div class="svc-check-list">
-                <div class="svc-check-item" style="color:var(--c-gray-700);">We review your template and project details same day</div>
+                <div class="svc-check-item" style="color:var(--c-gray-700);">We review your template, sample rows, and project details same day</div>
                 <div class="svc-check-item" style="color:var(--c-gray-700);">You receive a fixed price and delivery date within 1 business day</div>
                 <div class="svc-check-item" style="color:var(--c-gray-700);">You sign a one-page scope agreement and pay a 50% deposit</div>
                 <div class="svc-check-item" style="color:var(--c-gray-700);">You share your data — we deliver clean CSV files by the agreed date</div>
@@ -123,7 +127,7 @@
           <!-- Right: form -->
           <div>
             <div class="contact-form-wrap">
-              <h3 style="margin-bottom:var(--s-6);">Send Us a Message</h3>
+              <h3 style="margin-bottom:var(--s-6);">Start your project</h3>
 
               <form
                 id="contact-form"
@@ -199,10 +203,6 @@
                       <span>Suppliers</span>
                     </label>
                     <label class="form-checkbox-item">
-                      <input type="checkbox" name="modules" value="Inventory / stock movements" />
-                      <span>Inventory / stock movements</span>
-                    </label>
-                    <label class="form-checkbox-item">
                       <input type="checkbox" name="modules" value="Export data analysis only (customer or supplier export cleanup)" />
                       <span>Export data analysis only (customer or supplier export cleanup)</span>
                     </label>
@@ -219,38 +219,161 @@
                   <p class="form-hint">Total across all modules selected. Approximate is fine.</p>
                   <div class="form-radio-group">
                     <label class="form-radio-item">
-                      <input type="radio" name="record_count" value="Under 1,000 rows" required />
-                      <span>Under 1,000 rows</span>
+                      <input type="radio" name="record_count" value="Under 500 rows" required />
+                      <span>Under 500 rows</span>
                     </label>
                     <label class="form-radio-item">
-                      <input type="radio" name="record_count" value="1,000 – 5,000 rows" />
-                      <span>1,000 – 5,000 rows</span>
+                      <input type="radio" name="record_count" value="500 – 1,999 rows" />
+                      <span>500 – 1,999 rows</span>
                     </label>
                     <label class="form-radio-item">
-                      <input type="radio" name="record_count" value="5,000 – 15,000 rows" />
-                      <span>5,000 – 15,000 rows</span>
+                      <input type="radio" name="record_count" value="2,000 – 4,999 rows" />
+                      <span>2,000 – 4,999 rows</span>
                     </label>
                     <label class="form-radio-item">
-                      <input type="radio" name="record_count" value="Over 15,000 rows" />
-                      <span>Over 15,000 rows</span>
+                      <input type="radio" name="record_count" value="5,000 – 14,999 rows" />
+                      <span>5,000 – 14,999 rows</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="record_count" value="15,000 or more rows" />
+                      <span>15,000 or more rows</span>
                     </label>
                   </div>
                 </div>
 
                 <!-- Q6: Source system -->
                 <div class="form-group">
-                  <label class="form-label" for="source-system">What system is the data coming from? <span class="req">*</span></label>
-                  <input
-                    class="form-input"
-                    type="text"
-                    id="source-system"
-                    name="source_system"
-                    required
-                    placeholder="e.g. QuickBooks, SAP Business One, Dynamics NAV, Excel…"
-                  />
+                  <label class="form-label">What system is the data coming from? <span class="req">*</span></label>
+                  <p class="form-hint">The ERP, accounting system, or spreadsheet you are migrating away from.</p>
+                  <div class="form-radio-group">
+                    <label class="form-radio-item">
+                      <input type="radio" name="source_system" value="SAP Business One / Dynamics NAV" required />
+                      <span>SAP Business One / Dynamics NAV</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="source_system" value="Sage 50 / Sage 100" />
+                      <span>Sage 50 / Sage 100</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="source_system" value="QuickBooks (Desktop or Online)" />
+                      <span>QuickBooks (Desktop or Online)</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="source_system" value="Excel spreadsheet(s)" />
+                      <span>Excel spreadsheet(s)</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="source_system" value="Multiple systems or spreadsheets mixed together" />
+                      <span>Multiple systems or spreadsheets mixed together</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="source_system" value="Other / not sure" />
+                      <span>Other / not sure</span>
+                    </label>
+                  </div>
                 </div>
 
-                <!-- Q7: Sage X3 import template upload -->
+                <!-- Q7: Catch-weight products -->
+                <div class="form-group" id="catchweight-group">
+                  <label class="form-label">Do any products sell or purchase by actual weight — not a fixed quantity? <span class="req">*</span></label>
+                  <p class="form-hint">
+                    Examples: seafood priced per lb, meat purchased by kg, cheese sold by actual cut weight.
+                    These are called "catch-weight" items — common in food, seafood, and protein distribution.
+                    If you are not converting Products, select "Not applicable."
+                  </p>
+                  <div class="form-radio-group">
+                    <label class="form-radio-item">
+                      <input type="radio" name="catchweight" value="No — all products have a fixed unit" required />
+                      <span>No — all products have a fixed unit (piece, case, box, etc.)</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="catchweight" value="Yes — small portion (under 20% of catalog)" />
+                      <span>Yes — a small portion of products (under 20% of catalog)</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="catchweight" value="Yes — significant portion (20–50% of catalog)" />
+                      <span>Yes — a significant portion (20–50% of catalog)</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="catchweight" value="Yes — majority of products (seafood, meat, or protein-heavy catalog)" />
+                      <span>Yes — the majority of products (seafood, meat, or protein-heavy catalog)</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="catchweight" value="Not sure — would need to check" />
+                      <span>Not sure — I would need to check</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="catchweight" value="Not applicable — not converting products" />
+                      <span>Not applicable — I am not converting products</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Q8: Pack sizes and conversion factors -->
+                <div class="form-group">
+                  <label class="form-label">Do your products have pack sizes or unit conversion factors? <span class="req">*</span></label>
+                  <p class="form-hint">
+                    Examples: "1 case = 12 units", "1 pallet = 48 cases", weight conversions like "1 lb = 0.4536 kg".
+                    Are these stored as numbers in your system — or written into product names and descriptions?
+                    If you are not converting Products, select "Not applicable."
+                  </p>
+                  <div class="form-radio-group">
+                    <label class="form-radio-item">
+                      <input type="radio" name="conversion_factors" value="Yes — stored as numbers in dedicated fields" required />
+                      <span>Yes — stored as numbers in dedicated fields in our system</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="conversion_factors" value="Partially — some in fields, some in descriptions" />
+                      <span>Partially — some are in fields, some are written into descriptions</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="conversion_factors" value="Mostly in descriptions — written into product name or notes" />
+                      <span>Mostly in descriptions — written into product names or notes</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="conversion_factors" value="Not stored at all — would need to be added" />
+                      <span>Not stored at all — they would need to be researched and added</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="conversion_factors" value="We don't use pack sizes or unit conversions" />
+                      <span>We do not use pack sizes or unit conversions</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="conversion_factors" value="Not applicable — not converting products" />
+                      <span>Not applicable — I am not converting products</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Q9: Duplicate records -->
+                <div class="form-group">
+                  <label class="form-label">Have you noticed duplicate records in your current system? <span class="req">*</span></label>
+                  <p class="form-hint">Duplicates — the same product, customer, or supplier appearing more than once under slightly different codes or names.</p>
+                  <div class="form-radio-group">
+                    <label class="form-radio-item">
+                      <input type="radio" name="duplicates" value="No — records have unique codes, clean data" required />
+                      <span>No — records have unique codes and the data looks clean</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="duplicates" value="A few duplicates expected — routine cleanup" />
+                      <span>A few duplicates expected — routine cleanup</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="duplicates" value="Yes — same records appear in multiple files or lists" />
+                      <span>Yes — same records appear in multiple files or export lists</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="duplicates" value="Significant problem — no consistent unique identifier" />
+                      <span>Significant problem — no consistent unique identifier across records</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="duplicates" value="Not sure" />
+                      <span>Not sure</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Q10: Sage X3 import template upload -->
                 <div class="form-group">
                   <label class="form-label" for="template-file">Your Sage X3 import template <span class="req">*</span></label>
                   <p class="form-hint">
@@ -268,10 +391,43 @@
                   />
                 </div>
 
-                <!-- Q8: Main challenge + deadline -->
+                <!-- Q10: Sample data rows -->
+                <div class="form-group">
+                  <label class="form-label" for="sample-data">Paste up to 5 representative rows from your old system <span class="req">*</span></label>
+                  <p class="form-hint">
+                    Copy directly from Excel or your ERP export — include the <strong>column header row as the first row</strong>.
+                    Choose rows that represent your most common record types. For example, if converting products:
+                    one frozen item, one dry good, one catch-weight item if you have them.
+                    You can anonymize names if needed — keep all other fields intact.
+                    <strong>Blank cells are fine and informative.</strong>
+                  </p>
+                  <p class="form-hint" style="margin-top: 4px;">
+                    Example format (tab-separated or comma-separated is fine):<br>
+                    <code style="font-size:11px; background:var(--c-gray-100, #f3f4f6); padding:2px 5px; border-radius:3px; display:inline-block; margin-top:4px;">ITEM_CODE &nbsp; DESCRIPTION &nbsp; UNIT &nbsp; PACK_SIZE &nbsp; ALT_UNIT &nbsp; CONV_FACTOR</code>
+                  </p>
+                  <div style="display:flex; align-items:flex-start; gap:10px; background:var(--c-gray-50, #f9fafb); border:1px solid var(--c-gray-200, #e5e7eb); border-left: 3px solid var(--c-amber, #d97706); border-radius:var(--r-lg, 12px); padding:var(--s-3, 12px) var(--s-4, 16px); margin-bottom:var(--s-3, 12px); font-size:var(--text-sm, 13px); color:var(--c-gray-600, #4b5563); line-height:1.6;">
+                    <span style="font-size:16px; flex-shrink:0; margin-top:1px;">🔒</span>
+                    <span><strong style="color:var(--c-gray-800, #1f2937);">Your data stays private.</strong> Sample rows submitted here are used solely to assess your project scope and prepare an accurate quote. They are never shared with third parties, never used for any other purpose, and deleted after your quote is issued. If you prefer, you may anonymize product names — just keep all field values and units intact.</span>
+                  </div>
+                  <textarea
+                    class="form-textarea"
+                    id="sample-data"
+                    name="sample_data"
+                    required
+                    rows="6"
+                    placeholder="Paste header row + up to 5 data rows here. Copy directly from Excel — tab or comma separated is fine.
+
+Example:
+ITEM_CODE    DESCRIPTION    UNIT    PACK_SIZE    WEIGHT    ALT_UNIT    CONV
+FZ-1042    Salmon Fillet Frozen    LB        2.1    CS    10
+DG-0881    Pasta Penne    CS    12        EA    12"
+                  ></textarea>
+                </div>
+
+                <!-- Q11: Main challenge + deadline -->
                 <div class="form-group">
                   <label class="form-label" for="message">Describe your main data challenge <span class="req">*</span></label>
-                  <p class="form-hint">One or two sentences. Include your go-live date or deadline if you have one.</p>
+                  <p class="form-hint">One or two sentences. What is failing or causing problems? Include your go-live date or deadline if you have one.</p>
                   <textarea
                     class="form-textarea"
                     id="message"
@@ -284,9 +440,14 @@
 
                 <!-- Notice -->
                 <div style="background:var(--c-amber-pale, #fffbeb); border:1px solid rgba(217,119,6,.2); border-radius:var(--r-lg, 12px); padding:var(--s-4, 16px) var(--s-5, 20px); margin-bottom:var(--s-5, 20px); font-size:var(--text-sm, 13px); color:var(--c-gray-700, #374151); line-height:1.6;">
-                  <strong>What happens next:</strong> We review your template and reply within
-                  1 business day with a fixed price and delivery date. Your actual data files
-                  are only shared after you've agreed to the scope and price.
+                  <strong>What happens next:</strong> We review your template and sample rows, then reply within
+                  1 business day with a fixed price and delivery date. Your full data export
+                  is only shared after scope and price are agreed — and only via a private
+                  Google Drive folder shared exclusively with you.<br><br>
+                  <strong>Data protection:</strong> Sample rows submitted here are used solely to prepare your quote.
+                  They are never shared with third parties, never retained after the quote is issued, and never
+                  used for any purpose beyond scoping your project. ForgeMend LLC operates under a strict
+                  confidentiality policy — see our <a href="privacy.html" style="color:var(--c-amber, #d97706);">Privacy Policy</a>.
                 </div>
 
                 <!-- Submit -->
@@ -294,14 +455,14 @@
                   Submit project request &rarr;
                 </button>
                 <p class="form-sub" style="text-align:center; margin-top:var(--s-3, 12px);">
-                  No sensitive data required at this stage &nbsp;·&nbsp; No calls needed for smaller projects
+                  Sample data is used solely to assess your project — never shared or retained &nbsp;·&nbsp; No calls needed for smaller projects
                 </p>
 
               </form>
 
               <div id="form-success">
                 <h3>✅ Project request received!</h3>
-                <p>Thank you — we'll review your template and reply within one business day with a fixed price and delivery date.</p>
+                <p>Thank you — we will review your template and sample data and reply within one business day with a fixed price and delivery date. No further information is needed from you at this stage.</p>
               </div>
             </div>
           </div>
@@ -322,7 +483,7 @@
         <div class="grid-2" style="max-width:900px; margin-inline:auto;">
           <div class="svc-card fade-up">
             <h3 style="font-size:var(--text-lg);">What do I need to submit a project?</h3>
-            <p>Two things: your Sage X3 import template (exported from Setup → Usage → Imports/Exports, or provided by your Sage partner) and a rough sense of your record counts. You share the actual data only after we've agreed on price and scope.</p>
+            <p>Three things: your Sage X3 import template (exported from Setup → Usage → Imports/Exports, or provided by your Sage partner), a rough sense of your record counts, and 5 representative rows from your old system pasted into the form — no sensitive data needed, just headers and a few rows so we can assess data quality before quoting. Your full data export is only shared after scope and price are agreed.</p>
           </div>
           <div class="svc-card fade-up">
             <h3 style="font-size:var(--text-lg);">Where do you serve clients?</h3>
@@ -355,7 +516,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="footer-logo">
-            <img src="assets/logo/forgemend_logo_v2_white.svg" alt="ForgeMend" class="footer-logo-img" />
+            <img src="assets/logo/forgemend_logo_v2_white.svg" alt="ForgeMend" class="footer-logo-img" width="160" height="38" />
           </a>
           <p class="footer-tagline">Sage X3 data operations specialist · Remote services across North America.</p>
           <div class="footer-contact-links">
@@ -389,8 +550,8 @@
       <div class="footer-bottom">
         <span>&copy; 2026 ForgeMend LLC. All rights reserved.</span>
         <div class="footer-legal">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
         </div>
       </div>
     </div>

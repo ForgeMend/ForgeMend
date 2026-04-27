@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── Scroll-triggered fade-up animations ────────────────────
-  const fadeEls = document.querySelectorAll('.fade-up');
+  const fadeEls = document.querySelectorAll('.fade-up, .founder-note');
 
   if (fadeEls.length) {
     if ('IntersectionObserver' in window) {
@@ -96,3 +96,45 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+// ── FAQ accordion ──────────────────────────────────
+(function () {
+  const faqBtns = document.querySelectorAll('.faq-q');
+  if (!faqBtns.length) return;
+
+  faqBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      const answerId = btn.getAttribute('aria-controls');
+      const answer = document.getElementById(answerId);
+
+      faqBtns.forEach(function (otherBtn) {
+        if (otherBtn !== btn) {
+          otherBtn.setAttribute('aria-expanded', 'false');
+          const otherId = otherBtn.getAttribute('aria-controls');
+          const otherAnswer = document.getElementById(otherId);
+          if (otherAnswer) otherAnswer.hidden = true;
+        }
+      });
+
+      if (isOpen) {
+        btn.setAttribute('aria-expanded', 'false');
+        if (answer) answer.hidden = true;
+      } else {
+        btn.setAttribute('aria-expanded', 'true');
+        if (answer) answer.hidden = false;
+      }
+    });
+  });
+
+  if (window.location.pathname.includes('services')) {
+    const firstBtn = faqBtns[0];
+    const firstAnswer = document.getElementById(
+      firstBtn.getAttribute('aria-controls')
+    );
+    if (firstBtn && firstAnswer) {
+      firstBtn.setAttribute('aria-expanded', 'true');
+      firstAnswer.hidden = false;
+    }
+  }
+})();

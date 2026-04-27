@@ -13,8 +13,12 @@
   <meta property="og:url"         content="https://forgemend.com/services.html" />
   <meta property="og:title"       content="Sage X3 Data Conversion &amp; Cleanup — Services | ForgeMend" />
   <meta property="og:description" content="We take your messy ERP exports and your Sage X3 templates and deliver validated, import-ready CSV files — mapped to your exact environment." />
+  <meta property="og:image"       content="https://forgemend.com/assets/og-image.png" />
 
   <link rel="icon" type="image/svg+xml" href="assets/logo/forgemend_icon_v2.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&family=Montserrat:wght@600;700;800;900&display=swap" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
@@ -24,7 +28,7 @@
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="index.html" class="nav-logo" aria-label="ForgeMend home">
-          <img src="assets/logo/forgemend_logo_v2_dark.svg" alt="ForgeMend" class="nav-logo-img" />
+          <img src="assets/logo/forgemend_logo_v2_dark.svg" alt="ForgeMend" class="nav-logo-img" width="160" height="42" />
         </a>
         <ul class="nav-links" role="list">
           <li><a href="index.html"        class="nav-link">Home</a></li>
@@ -281,6 +285,196 @@
       </div>
     </section>
 
+  <section class="section" id="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">FAQ</span>
+        <h2 id="faq-heading">Common questions</h2>
+        <div class="divider"></div>
+        <p>Everything prospects ask before submitting a project —
+        answered directly.</p>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"
+                  aria-controls="faq-a-1">
+            <span>What if my data is really messy — is it too far
+            gone?</span>
+            <span class="faq-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="faq-a-1" hidden>
+            <p>Messy data is the whole point. Most clients arrive after
+            a failed import attempt or after discovering their legacy
+            exports are inconsistent. We flag what can be resolved
+            automatically and what needs a human decision. We do not
+            guess on anything that matters.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"
+                  aria-controls="faq-a-2">
+            <span>Which source systems can you migrate from?</span>
+            <span class="faq-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="faq-a-2" hidden>
+            <p>We have direct hands-on experience with QuickBooks
+            Desktop, QuickBooks Online, SAP Business One, Dynamics NAV,
+            Sage 50, and Sage 100. We also handle migrations from mixed
+            systems and Excel-based records. If your source system is
+            not listed, tell us in the project form — we will confirm
+            before you commit to anything.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"
+                  aria-controls="faq-a-3">
+            <span>Why do imports succeed but leave names, currency,
+            or contacts blank?</span>
+            <span class="faq-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="faq-a-3" hidden>
+            <p>This happens when files are imported directly to
+            BPCUSTOMER or BPSUPPLIER without first updating the core
+            BPARTNER table. Name, currency, and most header fields live
+            in BPARTNER — the supplier and customer tables do not
+            overwrite them.</p>
+            <p>We handle the full dependency sequence:
+            <strong>BPARTNER → BPADDRESS → Contacts →
+            BPCUSTOMER/BPSUPPLIER</strong>. Every mandatory field is
+            mapped and validated before delivery.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"
+                  aria-controls="faq-a-4">
+            <span>How long does a typical project take?</span>
+            <span class="faq-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="faq-a-4" hidden>
+            <div class="faq-timeline-grid">
+              <div class="faq-timeline-item">
+                <span class="faq-timeline-label">Export data
+                analysis</span>
+                <span class="faq-timeline-value">2 business
+                days</span>
+              </div>
+              <div class="faq-timeline-item">
+                <span class="faq-timeline-label">Single module</span>
+                <span class="faq-timeline-value">5–7 business
+                days</span>
+              </div>
+              <div class="faq-timeline-item">
+                <span class="faq-timeline-label">Combined
+                package</span>
+                <span class="faq-timeline-value">10–14 business
+                days</span>
+              </div>
+              <div class="faq-timeline-item">
+                <span class="faq-timeline-label">Price
+                confirmed</span>
+                <span class="faq-timeline-value">Within 1 business
+                day</span>
+              </div>
+            </div>
+            <p>Exact delivery date is confirmed and agreed in writing
+            before any work begins.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"
+                  aria-controls="faq-a-5">
+            <span>Do I need to send my full data upfront to get a
+            price?</span>
+            <span class="faq-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="faq-a-5" hidden>
+            <p>No. To confirm a fixed price we need your
+            <strong>Sage X3 import template</strong> and a few answers
+            about your data — record count, source system, and
+            catch-weight status. You provide those in the project form.
+            You only share your full data export after approving the
+            price and signing the one-page scope agreement.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"
+                  aria-controls="faq-a-6">
+            <span>Can you handle catch-weight items and complex UOM
+            hierarchies?</span>
+            <span class="faq-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="faq-a-6" hidden>
+            <p>Yes — this is a core specialty. Catch-weight
+            configuration, stock unit hierarchy rules, density-linked
+            coefficients, and multi-unit product catalogs are all
+            covered. UOM coefficient direction, GESTCO conversion table
+            completeness, and product-specific coefficients in ITF are
+            validated before any file is delivered.</p>
+            <p>Food, seafood, and protein distribution catalogs are
+            where most of this complexity lives and where we have the
+            most direct hands-on experience.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"
+                  aria-controls="faq-a-7">
+            <span>What if the files still have errors after
+            delivery?</span>
+            <span class="faq-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="faq-a-7" hidden>
+            <p>Every project includes <strong>one free revision round
+            within 7 days</strong> of delivery. If an error is
+            attributable to a mapping mistake on our side, we fix it
+            at no cost. If new requirements emerge after delivery —
+            fields not in the original scope, or template changes made
+            after work began — that is a new scope and we quote it
+            separately. Everything is documented so there is no
+            ambiguity about what was included.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"
+                  aria-controls="faq-a-8">
+            <span>Do you work with Sage implementation
+            partners?</span>
+            <span class="faq-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="faq-a-8" hidden>
+            <p>Yes. We work directly with manufacturers and
+            distributors, and alongside Sage VARs who need data
+            preparation handled by someone with hands-on import
+            experience. If your Sage partner is managing the broader
+            implementation and wants to subcontract the data cleanup
+            work, contact us and we can discuss the arrangement.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="faq-footer">
+        <span class="faq-footer-question">Still have a question not
+        answered here?</span>
+        <span class="faq-footer-sep">·</span>
+        <a href="mailto:info@forgemend.com" class="faq-email-link">
+          info@forgemend.com
+        </a>
+        <span class="faq-footer-sep">·</span>
+        <span>We respond within one business day.</span>
+      </div>
+
+    </div>
+  </section>
+
     <!-- CTA -->
     <section class="cta-band" id="start-project">
       <div class="container">
@@ -289,7 +483,7 @@
           <p>Fill in the project form — we'll confirm a fixed price within 1 business day. No calls required for smaller projects.</p>
           <div class="cta-band-actions">
             <a href="contact.html" class="btn btn-primary btn-lg">Start your project &rarr;</a>
-            <a href="about.html"   class="btn btn-secondary btn-lg">About ForgeMend</a>
+            <a href="about.html"   class="cta-band-text-link">About ForgeMend</a>
           </div>
         </div>
       </div>
@@ -302,7 +496,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="footer-logo">
-            <img src="assets/logo/forgemend_logo_v2_white.svg" alt="ForgeMend" class="footer-logo-img" />
+            <img src="assets/logo/forgemend_logo_v2_white.svg" alt="ForgeMend" class="footer-logo-img" width="160" height="38" />
           </a>
           <p class="footer-tagline">Sage X3 data operations specialist · Remote services across North America.</p>
           <div class="footer-contact-links">
@@ -336,8 +530,8 @@
       <div class="footer-bottom">
         <span>&copy; 2026 ForgeMend LLC. All rights reserved.</span>
         <div class="footer-legal">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
         </div>
       </div>
     </div>

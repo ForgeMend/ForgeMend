@@ -26,6 +26,9 @@
   <link rel="icon" type="image/svg+xml" href="assets/logo/forgemend_icon_v2.svg" />
 
   <!-- Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&family=Montserrat:wght@600;700;800;900&display=swap" />
   <link rel="stylesheet" href="css/main.css" />
 
   <!-- Structured Data -->
@@ -51,7 +54,7 @@
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="index.html" class="nav-logo" aria-label="ForgeMend home">
-          <img src="assets/logo/forgemend_logo_v2_dark.svg" alt="ForgeMend" class="nav-logo-img" />
+          <img src="assets/logo/forgemend_logo_v2_dark.svg" alt="ForgeMend" class="nav-logo-img" width="160" height="42" />
         </a>
 
         <ul class="nav-links" role="list">
@@ -113,7 +116,7 @@
             </div>
             <div class="hero-stat">
               <div class="hero-stat-value">0</div>
-              <div class="hero-stat-label">Critical mapping errors on delivery</div>
+              <div class="hero-stat-label">Guaranteed: zero critical mapping errors or we revise free</div>
             </div>
           </div>
         </div>
@@ -326,6 +329,28 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════
+         LEAD MAGNET
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="section section--gray" aria-labelledby="checklist-heading">
+      <div class="container">
+        <div style="max-width:680px; margin-inline:auto; text-align:center;">
+          <span class="eyebrow">Free Resource</span>
+          <h2 id="checklist-heading">The Sage X3 Import Gotcha Checklist</h2>
+          <div class="divider"></div>
+          <p style="font-size:var(--text-lg); color:var(--c-gray-600); line-height:1.75; margin-bottom:var(--s-8);">
+            8 problems that break most Sage X3 migrations — and the exact fix for each. Field separators, UOM direction errors, Excel corruption, silent failures. One page. No fluff.
+          </p>
+          <a href="checklist.html" class="btn btn-primary btn-lg">
+            Get the free checklist &rarr;
+          </a>
+          <p style="margin-top:var(--s-4); font-size:var(--text-sm); color:var(--c-gray-400);">
+            Sent by email · No spam · Unsubscribe any time
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
          CTA BAND
     ═══════════════════════════════════════════════════════════ -->
     <section class="cta-band" id="start-project" aria-labelledby="cta-heading">
@@ -335,7 +360,7 @@
           <p>Fill in the project form — we'll confirm a fixed price within 1 business day. No calls required for smaller projects.</p>
           <div class="cta-band-actions">
             <a href="contact.html" class="btn btn-primary btn-lg">Start your project &rarr;</a>
-            <a href="services.html" class="btn btn-secondary btn-lg">See full service details</a>
+            <a href="services.html" class="cta-band-text-link">See full service details</a>
           </div>
         </div>
       </div>
@@ -350,7 +375,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="footer-logo" aria-label="ForgeMend home">
-            <img src="assets/logo/forgemend_logo_v2_white.svg" alt="ForgeMend" class="footer-logo-img" />
+            <img src="assets/logo/forgemend_logo_v2_white.svg" alt="ForgeMend" class="footer-logo-img" width="160" height="38" />
           </a>
           <p class="footer-tagline">Sage X3 data operations specialist · Remote services across North America.</p>
           <div class="footer-contact-links">
@@ -390,8 +415,8 @@
       <div class="footer-bottom">
         <span>&copy; 2026 ForgeMend LLC. All rights reserved.</span>
         <div class="footer-legal">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
         </div>
       </div>
     </div>
