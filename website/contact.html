@@ -154,7 +154,7 @@
               <div class="svc-check-list">
                 <div class="svc-check-item" style="color:var(--c-gray-700);">We review your template, sample rows, and project details same day</div>
                 <div class="svc-check-item" style="color:var(--c-gray-700);">You receive a fixed price and delivery date within 1 business day</div>
-                <div class="svc-check-item" style="color:var(--c-gray-700);">You sign a one-page scope agreement and pay a 50% deposit</div>
+                <div class="svc-check-item" style="color:var(--c-gray-700);">You sign a one-page scope agreement and pay a 50% deposit. For product conversions, you'll also receive a short UOM definition worksheet to complete with your Sage partner before work begins.</div>
                 <div class="svc-check-item" style="color:var(--c-gray-700);">You share your data — we deliver clean CSV files by the agreed date</div>
               </div>
             </div>
@@ -310,7 +310,7 @@
                 </div>
 
                 <!-- Q7: Catch-weight products -->
-                <div class="form-group" id="catchweight-group">
+                <div class="form-group products-only-group" id="catchweight-group">
                   <label class="form-label">Do any products sell or purchase by actual weight — not a fixed quantity? <span class="req">*</span></label>
                   <p class="form-hint">
                     Examples: seafood priced per lb, meat purchased by kg, cheese sold by actual cut weight.
@@ -319,7 +319,7 @@
                   </p>
                   <div class="form-radio-group">
                     <label class="form-radio-item">
-                      <input type="radio" name="catchweight" value="No — all products have a fixed unit" required />
+                      <input type="radio" name="catchweight" value="No — all products have a fixed unit" required data-prod-req />
                       <span>No — all products have a fixed unit (piece, case, box, etc.)</span>
                     </label>
                     <label class="form-radio-item">
@@ -346,7 +346,7 @@
                 </div>
 
                 <!-- Q8: Pack sizes and conversion factors -->
-                <div class="form-group">
+                <div class="form-group products-only-group">
                   <label class="form-label">Do your products have pack sizes or unit conversion factors? <span class="req">*</span></label>
                   <p class="form-hint">
                     Examples: "1 case = 12 units", "1 pallet = 48 cases", weight conversions like "1 lb = 0.4536 kg".
@@ -355,7 +355,7 @@
                   </p>
                   <div class="form-radio-group">
                     <label class="form-radio-item">
-                      <input type="radio" name="conversion_factors" value="Yes — stored as numbers in dedicated fields" required />
+                      <input type="radio" name="conversion_factors" value="Yes — stored as numbers in dedicated fields" required data-prod-req />
                       <span>Yes — stored as numbers in dedicated fields in our system</span>
                     </label>
                     <label class="form-radio-item">
@@ -377,6 +377,66 @@
                     <label class="form-radio-item">
                       <input type="radio" name="conversion_factors" value="Not applicable — not converting products" />
                       <span>Not applicable — I am not converting products</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- UOM inventory -->
+                <div class="form-group products-only-group">
+                  <label class="form-label" for="uom-list">
+                    What units of measure appear in your product data?
+                    <span class="req">*</span>
+                  </label>
+                  <p class="form-hint">
+                    List every unit you can find — in fields, product codes,
+                    descriptions, pack size columns, or ordering fields.
+                    Don't worry about which is stock vs. sales vs. purchase,
+                    just list them all. Include units buried in product names
+                    (e.g. "12-Pack Bottle" implies both EA and CS need to be
+                    set up).
+                  </p>
+                  <p class="form-hint" style="margin-top:4px;">
+                    Example: <code style="font-size:11px; background:var(--c-gray-100,#f3f4f6); padding:2px 5px; border-radius:3px;">EA, CS, LB, KG, PALLET</code>
+                  </p>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="uom-list"
+                    name="uom_list"
+                    placeholder="e.g. EA, CS, LB, KG, PALLET"
+                    required
+                    data-prod-req
+                  />
+                </div>
+
+                <!-- Custom fields -->
+                <div class="form-group products-only-group">
+                  <label class="form-label">
+                    Does your Sage X3 import template include any custom fields
+                    added by your Sage partner?
+                    <span class="req">*</span>
+                  </label>
+                  <p class="form-hint">
+                    Custom fields often appear at the end of the template with
+                    names like ZZCATEGORY or ZZTYPE, or your partner may have
+                    described them as "fields we added for your business."
+                  </p>
+                  <div class="form-radio-group">
+                    <label class="form-radio-item">
+                      <input type="radio" name="custom_fields"
+                             value="No — appears to be a standard Sage X3 template"
+                             required data-prod-req />
+                      <span>No — it appears to be a standard Sage X3 template</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="custom_fields"
+                             value="Yes — I can see fields my partner added" />
+                      <span>Yes — I can see fields my partner added</span>
+                    </label>
+                    <label class="form-radio-item">
+                      <input type="radio" name="custom_fields"
+                             value="Not sure — I don't know which fields are custom" />
+                      <span>Not sure — I don't know which fields are standard vs. custom</span>
                     </label>
                   </div>
                 </div>
@@ -424,6 +484,28 @@
                     name="template_file"
                     accept=".csv,.xlsx,.xls"
                     required
+                  />
+                </div>
+
+                <!-- UOM documentation upload -->
+                <div class="form-group products-only-group">
+                  <label class="form-label" for="uom-file">
+                    UOM hierarchy chart or unit documentation
+                    <span style="color:var(--c-gray-400); font-weight:400;">(optional)</span>
+                  </label>
+                  <p class="form-hint">
+                    If your Sage partner has provided any UOM relationship chart,
+                    conversion table, or document showing how your units relate
+                    (e.g. EA &rarr; CS &rarr; PALLET), upload it here. If you don't have
+                    one yet, leave this blank.
+                    Accepted: .csv, .xlsx, .pdf, .png (max 5 MB)
+                  </p>
+                  <input
+                    class="form-input"
+                    type="file"
+                    id="uom-file"
+                    name="uom_file"
+                    accept=".csv,.xlsx,.pdf,.png"
                   />
                 </div>
 
@@ -597,5 +679,42 @@ DG-0881    Pasta Penne    CS    12        EA    12"
   </footer>
 
   <script src="js/main.js" defer></script>
+
+  <script>
+  (function () {
+    var PRODUCTS_VALUE = 'Products / items (includes UOM conversions)';
+
+    function isProductsChecked() {
+      var cbs = document.querySelectorAll('input[name="modules"]');
+      for (var i = 0; i < cbs.length; i++) {
+        if (cbs[i].value === PRODUCTS_VALUE && cbs[i].checked) return true;
+      }
+      return false;
+    }
+
+    function toggleProductGroups() {
+      var show = isProductsChecked();
+      document.querySelectorAll('.products-only-group').forEach(function (el) {
+        el.style.display = show ? '' : 'none';
+      });
+      // Toggle required on marked inputs so hidden groups don't block submission
+      document.querySelectorAll('.products-only-group [data-prod-req]').forEach(function (input) {
+        if (show) {
+          input.setAttribute('required', '');
+        } else {
+          input.removeAttribute('required');
+        }
+      });
+    }
+
+    // Attach change listener to all module checkboxes
+    document.querySelectorAll('input[name="modules"]').forEach(function (cb) {
+      cb.addEventListener('change', toggleProductGroups);
+    });
+
+    // Set initial state on load (hidden by default)
+    toggleProductGroups();
+  }());
+  </script>
 </body>
 </html>
