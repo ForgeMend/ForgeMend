@@ -1715,6 +1715,68 @@ p:last-child { margin-bottom: 0; }
 .cta-band-text-link:hover { color: var(--c-white); }
 
 /* ──────────────────────────────────────────────────────────
+   21b. CTA ACTIONS — divider + secondary links block
+   ────────────────────────────────────────────────────────── */
+
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.cta-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 1.25rem auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+.cta-divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
+.cta-divider-text {
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  white-space: nowrap;
+}
+
+.cta-secondary-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.cta-link {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  padding-bottom: 1px;
+  transition: color var(--t-fast), border-color var(--t-fast);
+}
+.cta-link:hover {
+  color: rgba(255,255,255,0.95);
+  border-color: rgba(255,255,255,0.55);
+}
+
+.cta-link-separator {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background: rgba(255,255,255,0.2);
+  flex-shrink: 0;
+}
+
+/* ──────────────────────────────────────────────────────────
    22. ABOUT PAGE — EXPERIENCE STATS & FOUNDER'S NOTE
    ────────────────────────────────────────────────────────── */
 
