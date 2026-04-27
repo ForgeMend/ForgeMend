@@ -1723,57 +1723,74 @@ p:last-child { margin-bottom: 0; }
   flex-direction: column;
   align-items: center;
   gap: 0;
+  width: 100%;
 }
 
-.cta-divider {
+/* "or" divider */
+.cta-or-divider {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin: 1.25rem auto;
   width: 100%;
-  max-width: 300px;
+  max-width: 280px;
+  margin: 1.25rem 0;
 }
 
-.cta-divider-line {
+.cta-or-line {
   flex: 1;
   height: 1px;
-  background: rgba(255,255,255,0.15);
+  background-color: rgba(255, 255, 255, 0.25);
+  display: block;
 }
 
-.cta-divider-text {
+.cta-or-text {
   font-size: 12px;
-  color: rgba(255,255,255,0.45);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
   white-space: nowrap;
+  line-height: 1;
 }
 
+/* secondary links row */
 .cta-secondary-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 0.25rem;
 }
 
-.cta-link {
-  font-size: var(--text-sm);
-  color: rgba(255,255,255,0.6);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.25);
+/* each text link */
+.cta-text-link {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.30);
   padding-bottom: 1px;
-  transition: color var(--t-fast), border-color var(--t-fast);
-}
-.cta-link:hover {
-  color: rgba(255,255,255,0.95);
-  border-color: rgba(255,255,255,0.55);
+  transition: color 0.15s ease, border-color 0.15s ease;
+  background: none !important;
 }
 
-.cta-link-separator {
+.cta-text-link:hover {
+  color: rgba(255, 255, 255, 0.95) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.65) !important;
+  background: none !important;
+  text-decoration: none !important;
+}
+
+/* vertical pipe separator between the two links */
+.cta-pipe {
   display: inline-block;
   width: 1px;
-  height: 12px;
-  background: rgba(255,255,255,0.2);
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.20);
   flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .cta-pipe { display: none; }
+  .cta-secondary-links { flex-direction: column; gap: 10px; }
 }
 
 /* ──────────────────────────────────────────────────────────
